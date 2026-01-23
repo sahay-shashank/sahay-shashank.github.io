@@ -1,0 +1,12 @@
+version: 3
+
+silent: true
+
+tasks:
+  dev:run:
+    dir: "app/{{ .CLI_ARGS }}"
+    desc: Run the static website (dev mode)
+    cmds:
+    - echo "[INFO] Running the static website {{ .CLI_ARGS }}"
+    - NODE_ENV=dev npm run dev -- --host
+  
