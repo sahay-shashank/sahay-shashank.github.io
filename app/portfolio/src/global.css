@@ -15,6 +15,14 @@
     color: var(--text);
 }
 
+html,
+body,
+a,
+button {
+    transition: color 0.5s ease, background-color 1s ease, border-color 1s ease, box-shadow 1s ease;
+}
+
+
 body {
     background-color: var(--bg);
     font-family: "Google Sans Code", monospace;

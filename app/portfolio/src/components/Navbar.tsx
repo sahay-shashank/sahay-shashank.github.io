@@ -1,5 +1,6 @@
-import { Button, NavBar } from "@sahay-shashank/ui-library";
-import { useTheme } from "../context/theme";
+import { useTheme } from "@/context/theme";
+import { NavBar, IconButton } from "@sahay-shashank/ui-library";
+import { ThemeIcon } from "./ThemeIcon";
 
 export default function NavBarComponent() {
     const links = [
@@ -8,14 +9,22 @@ export default function NavBarComponent() {
         { label: "Projects", href: "#Projects" },
         { label: "Contact", href: "#Contact" },
     ];
-    const { toggleTheme } = useTheme();
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <NavBar>
             <NavBar.Logo>SS</NavBar.Logo>
-            <NavBar.Links links={links} />
+            <NavBar.Links>
+                {links.map((link) => (
+                    <NavBar.LinkItem key={link.href}>
+                        <a key={link.href} href={link.href}>{link.label}</a>
+                    </NavBar.LinkItem>
+                ))}
+
+            </NavBar.Links>
             <NavBar.Actions>
-                <Button variant="primary" onClick={toggleTheme}>Change Theme</Button>
+                <IconButton icon={<ThemeIcon theme={theme} />} onClick={toggleTheme} />
+                {/* <Button variant="primary" onClick={toggleTheme}>Change Theme</Button> */}
             </NavBar.Actions>
         </NavBar>
     )
