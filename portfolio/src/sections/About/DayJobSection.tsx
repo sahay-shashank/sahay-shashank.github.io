@@ -26,28 +26,28 @@ function DayJobSection() {
             </div>
 
             {/* Timeline Block */}
+            <div className=" border-l border-gray-300">
+                {entries.map((entry) => {
+                    const Content = entry.content
+                    const TimelineEntryChild = () => (
+                        <MDXWrapper>
+                            <Content />
+                        </MDXWrapper>
+                    )
 
-            {entries.map((entry) => {
-                const Content = entry.content
-                const TimelineEntryChild = () => (
-                    <MDXWrapper>
-                        <Content />
-                    </MDXWrapper>
-                )
+                    return <TimelineEntry
+                        key={entry.metadata.company}
+                        title={entry.metadata.company}
+                        subtitle={`${entry.metadata.role} • ${entry.metadata.start} - ${entry.metadata.end}`}
+                        subtitleClassName="text-sm text-gray-500 mb-4"
+                        pointer={<span className="absolute -left-[7px] top-1.5 w-3 h-3 bg-blue-500 rounded-full" />}
+                        className="relative pl-6"
 
-                return <TimelineEntry
-                    key={entry.metadata.company}
-                    title={entry.metadata.company}
-                    subtitle={`${entry.metadata.role} • ${entry.metadata.start} - ${entry.metadata.end}`}
-                    subtitleClassName="text-sm text-gray-500 mb-4"
-                    pointer={<span className="absolute -left-[7px] top-1.5 w-3 h-3 bg-blue-500 rounded-full" />}
-                    className="relative border-l border-gray-300 pl-6 ml-2 mb-2"
-
-                >
-                    <TimelineEntryChild />
-                </TimelineEntry>
-            })}
-
+                    >
+                        <TimelineEntryChild />
+                    </TimelineEntry>
+                })}
+            </div>
         </section >
 
     )
