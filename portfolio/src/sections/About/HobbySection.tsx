@@ -2,7 +2,7 @@ import { loadHobby } from "@/controllers/loadHobby"
 import type { HobbyItem } from "@/types/hobby"
 import { useEffect, useState } from "react"
 import { MDXWrapper } from "@/components/mdxWrapper"
-import Card from "../Hobby/HobbyCard"
+import Card from "../../components/Card"
 
 
 function HobbySection() {
