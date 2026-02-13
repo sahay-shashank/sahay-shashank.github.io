@@ -13,7 +13,7 @@ export default function NavBarComponent() {
 
     return (
         <NavBar>
-            <NavBar.Logo>SS</NavBar.Logo>
+            <NavBar.Logo>&gt;_&lt;</NavBar.Logo>
             <NavBar.Links>
                 {links.map((link) => (
                     <NavBar.LinkItem key={link.href}>
@@ -24,7 +24,6 @@ export default function NavBarComponent() {
             </NavBar.Links>
             <NavBar.Actions>
                 <IconButton icon={<ThemeIcon theme={theme} />} onClick={toggleTheme} />
-                {/* <Button variant="primary" onClick={toggleTheme}>Change Theme</Button> */}
             </NavBar.Actions>
         </NavBar>
     )

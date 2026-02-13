@@ -1,7 +1,7 @@
 import NavBar from "@/components/NavBar"
 import Hero from "@/sections/Hero"
 import About from "@/sections/About/About"
-import Projects from "@/sections/Projects"
+import Projects from "@/sections/Projects/Projects"
 import Expertise from "@/sections/Expertise"
 import Contact from "@/sections/Contact"
 

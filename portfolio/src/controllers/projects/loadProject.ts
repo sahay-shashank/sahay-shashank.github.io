@@ -1,9 +1,9 @@
 import type { MDXModule } from "@/components/mdxWrapper"
-import type { HobbyItem, HobbyMetadata } from "@/types/hobby"
+import type { ProjectItem, ProjectMetadata } from "@/types/projects"
 
-export async function loadHobby(): Promise<HobbyItem[]> {
-    const modules = import.meta.glob<MDXModule<HobbyMetadata>>(
-        "../content/about/*.hobby.mdx"
+export async function loadProject(): Promise<ProjectItem[]> {
+    const modules = import.meta.glob<MDXModule<ProjectMetadata>>(
+        "@/content/projects/*.mdx"
     )
 
     const items = await Promise.all(

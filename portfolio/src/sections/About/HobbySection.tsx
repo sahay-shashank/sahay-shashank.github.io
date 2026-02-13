@@ -1,8 +1,8 @@
-import { loadHobby } from "@/controllers/loadHobby"
+import { loadHobby } from "@/controllers/about/loadHobby"
 import type { HobbyItem } from "@/types/hobby"
 import { useEffect, useState } from "react"
 import { MDXWrapper } from "@/components/mdxWrapper"
-import Card from "../../components/Card"
+import Card from "@/components/Card"
 
 
 function HobbySection() {
@@ -16,7 +16,7 @@ function HobbySection() {
         <section id="night-job" className="px-6 py-6">
 
             <div className="mb-12">
-                <h2 className="text-3xl font-bold">
+                <h2 className="text-2xl font-bold">
                     Night Job
                 </h2>
 

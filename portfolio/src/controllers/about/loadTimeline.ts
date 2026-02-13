@@ -4,7 +4,7 @@ import type { TimelineMetadata, TimelineItem } from "@/types/timeline";
 
 export async function loadTimeline(): Promise<TimelineItem[]> {
     const modules = import.meta.glob<MDXModule<TimelineMetadata>>(
-        "../content/about/*.timeline.mdx"
+        "@/content/about/*.timeline.mdx"
     );
 
     const items = await Promise.all(

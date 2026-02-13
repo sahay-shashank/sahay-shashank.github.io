@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { loadTimeline } from "@/controllers/loadTimeline"
+import { loadTimeline } from "@/controllers/about/loadTimeline"
 import type { TimelineItem } from "@/types/timeline"
 import TimelineEntry from "@/components/TimelineEntry"
 import { MDXWrapper } from "@/components/mdxWrapper"
@@ -16,7 +16,7 @@ function DayJobSection() {
 
             {/* Title Block */}
             <div>
-                <h2 className="text-3xl font-bold">
+                <h2 className="text-2xl font-bold">
                     Day Job
                 </h2>
 
@@ -34,7 +34,7 @@ function DayJobSection() {
                             <Content />
                         </MDXWrapper>
                     )
-
+                    console.log(entry)
                     return <TimelineEntry
                         key={entry.metadata.company}
                         title={entry.metadata.company}

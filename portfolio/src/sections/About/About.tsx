@@ -1,4 +1,4 @@
-import { loadAbout } from "@/controllers/loadAbout"
+import { loadAbout } from "@/controllers/about/loadAbout"
 import { MDXWrapper } from "@/components/mdxWrapper"
 import type { AboutContent } from "@/types/about"
 import { useEffect, useState } from "react"
@@ -20,9 +20,9 @@ function About() {
 
             {/* Title Block */}
             <div className="mb-12">
-                <h2 className="text-3xl font-bold">
+                <h1 className="text-3xl font-bold">
                     {about.metadata.title}
-                </h2>
+                </h1>
 
                 <p className="text-gray-500 mt-2">
                     A quick introduction about who I am and what I build.
