@@ -1,7 +1,8 @@
 export interface ProjectMetadata {
     title: string,
     subtitle?: string,
-    featured?: boolean
+    featured?: boolean,
+    experimental?:boolean
 }
 
 export interface ProjectItem {
