@@ -1,9 +1,8 @@
 
 // AnimatedThemeIcon.tsx
 import { motion, AnimatePresence } from "framer-motion";
-import { SunIcon } from "@/assets/SunIcon";
-import { MoonIcon } from "@/assets/MoonIcon";
 import type { Theme } from "@/context/theme";
+import { Moon, Sun } from "lucide-react";
 
 
 const iconVariants = {
@@ -36,7 +35,7 @@ export const ThemeIcon = ({ theme }: { theme: Theme }) => {
                         animate="animate"
                         exit="exit"
                     >
-                        <SunIcon />
+                        <Sun size={'24px'} />
                     </motion.span>
                 ) : (
                     <motion.span
@@ -46,7 +45,7 @@ export const ThemeIcon = ({ theme }: { theme: Theme }) => {
                         animate="animate"
                         exit="exit"
                     >
-                        <MoonIcon />
+                        <Moon size={'24px'} />
                     </motion.span>
                 )}
             </AnimatePresence>

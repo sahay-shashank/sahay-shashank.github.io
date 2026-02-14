@@ -12,7 +12,7 @@ export function OpenSourceProjects() {
     }, [])
 
     return (
-        <section id="oss-projects" className="px-6 py-6">
+        <section id="oss-projects">
             <h3 className="text-2xl font-semibold">
                 OpenSource Projects
             </h3>

@@ -12,7 +12,7 @@ export function FeaturedProjects() {
     }, [])
 
     return (
-        <section id="featured-projects" className="px-6 py-6">
+        <section id="featured-projects">
             <h3 className="text-2xl font-semibold">
                 Featured Projects
             </h3>
