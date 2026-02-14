@@ -12,7 +12,7 @@ function DayJobSection() {
     }, [])
 
     return (
-        <section id="day-job" className="px-6 py-6">
+        <section id="day-job" className="py-6">
 
             {/* Title Block */}
             <div>
@@ -42,6 +42,7 @@ function DayJobSection() {
                         subtitleClassName="text-sm text-gray-500 mb-4"
                         pointer={<span className="absolute -left-[7px] top-1.5 w-3 h-3 bg-blue-500 rounded-full" />}
                         className="relative pl-6"
+                        titleClassName="text-xl font-medium"
 
                     >
                         <TimelineEntryChild />

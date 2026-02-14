@@ -15,9 +15,9 @@ function Contact({ email }: ContactProps) {
     }
 
     return (
-        <section className="px-6 py-20 border-t border-gray-200">
+        <section id="contact" className="px-6 py-20 border-t border-gray-200">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-                <h2 className="text-3xl font-semibold">
+                <h2 className="text-3xl font-bold">
                     Let's build something interesting together.
                 </h2>
 

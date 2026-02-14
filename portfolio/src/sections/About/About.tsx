@@ -16,10 +16,9 @@ function About() {
     const AboutContent = about.content
 
     return (
-        <section id="about" className="px-6 py-6">
-
+        <section id="about" className="px-6 py-20 border-t border-gray-200">
             {/* Title Block */}
-            <div className="mb-12">
+            <div className="mb-6 space-y-6 text-center">
                 <h1 className="text-3xl font-bold">
                     {about.metadata.title}
                 </h1>
