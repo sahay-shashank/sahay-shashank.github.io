@@ -3,12 +3,12 @@
 
 :root {
     --bg: #ffffff;
-    --text: #0f172a;
+    --text: #000000;
 }
 
 :root[data-theme="dark"] {
-    --bg: #020617;
-    --text: #e5e7eb;
+    --bg: #000000;
+    --text: #ffffff;
 }
 
 :any-link {

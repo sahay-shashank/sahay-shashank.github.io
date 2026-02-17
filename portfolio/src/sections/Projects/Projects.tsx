@@ -8,13 +8,14 @@ function Projects() {
             <h1 className="text-3xl font-bold text-center">
                 Projects
             </h1>
-            <p className="text-gray-500 mt-2">
+            <p className="text-gray-500 mt-2 text-center">
                 Showcasing projects
             </p>
-
-            <FeaturedProjects />
-            <OpenSourceProjects />
-            <ExperimentalProjects />
+            <div className="grid gap-6">
+                <FeaturedProjects />
+                <OpenSourceProjects />
+                <ExperimentalProjects />
+            </div>
         </section>
     )
 }

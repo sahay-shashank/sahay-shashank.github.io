@@ -19,23 +19,28 @@ export function OpenSourceProjects() {
             <p className="text-gray-500 mt-2">
                 Projects that love contributions
             </p>
-            <div className="grid gap-6">
+            <div className="grid gap-6 my-6">
 
 
                 {featureProjects.map((project) => {
                     if (project.metadata.featured) return null;
 
                     const Content = project.content
-                    const CardExpandableChild = () => (
-                        <MDXWrapper>
-                            <Content />
-                        </MDXWrapper>
+                    const CardChild = () => (
+                        <>
+                            <div
+                                className="w-full text-left flex justify-between items-center font-semibold"
+                            >
+                                <span>{project.metadata.title}</span>
+                            </div>
+                            {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
+                            <MDXWrapper>
+                                <Content />
+                            </MDXWrapper>
+                        </>
                     )
-                    return <Card expandable key={project.metadata.title} title={project.metadata.title}>
-                        {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
-                        <Card.Expanded>
-                            <CardExpandableChild />
-                        </Card.Expanded>
+                    return <Card key={project.metadata.title}>
+                        <CardChild />
                     </Card>
                 })}
             </div>

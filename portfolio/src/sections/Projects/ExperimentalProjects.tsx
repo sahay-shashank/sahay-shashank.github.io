@@ -25,16 +25,21 @@ export function ExperimentalProjects() {
                     if (!project.metadata.experimental) return null;
 
                     const Content = project.content
-                    const CardExpandableChild = () => (
-                        <MDXWrapper>
-                            <Content />
-                        </MDXWrapper>
+                    const CardChild = () => (
+                        <>
+                            <div
+                                className="w-full text-left flex justify-between items-center font-semibold"
+                            >
+                                <span>{project.metadata.title}</span>
+                            </div>
+                            {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
+                            <MDXWrapper>
+                                <Content />
+                            </MDXWrapper>
+                        </>
                     )
-                    return <Card expandable key={project.metadata.title} title={project.metadata.title}>
-                        {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
-                        <Card.Expanded>
-                            <CardExpandableChild />
-                        </Card.Expanded>
+                    return <Card key={project.metadata.title}>
+                        <CardChild />
                     </Card>
                 })}
             </div>
