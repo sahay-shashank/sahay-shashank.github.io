@@ -9,6 +9,10 @@ export const defaultMdxComponents = {
     <h2 className="text-2xl font-semibold mb-3" {...props} />
   ),
 
+  h3: (props: React.ComponentProps<"h3">) => (
+    <h2 className="text-xl font-medium mb-3" {...props} />
+  ),
+
   p: (props: React.ComponentProps<"p">) => (
     <p className="text-gray-700 mb-4 leading-relaxed" {...props} />
   ),
