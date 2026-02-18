@@ -4,6 +4,7 @@ import About from "@/sections/About/About"
 import Projects from "@/sections/Projects/Projects"
 import Contact from "@/sections/Contact"
 import Footer from "./sections/Footer"
+import Expertise from "./sections/Expertise"
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <main>
         <Hero />
         <About />
-        {/* <Expertise /> */}
+        <Expertise />
         <Projects />
         <Contact email={"sahayshashank28@gmail.com"} />
       </main>

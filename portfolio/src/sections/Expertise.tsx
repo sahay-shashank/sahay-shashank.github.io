@@ -1,4 +1,5 @@
-import { useMemo } from "react"
+import RadialSkillTree from "@/components/radialSkillTree"
+// import { useMemo } from "react"
 
 /* =============================
    Types
@@ -19,95 +20,95 @@ interface Skill {
    (Replace icons with your paths)
 ============================= */
 
-const skills: Skill[] = [
-  // Root
-  {
-    id: "me",
-    name: "Me",
-    icon: "/logos/profile.svg",
-    level: 4,
-    domain: "root",
-    featured: true,
-  },
+// const skills: Skill[] = [
+//   // Root
+//   {
+//     id: "me",
+//     name: "Me",
+//     icon: "/logos/profile.svg",
+//     level: 4,
+//     domain: "root",
+//     featured: true,
+//   },
 
-  // Featured Categories
-  {
-    id: "frontend",
-    name: "Frontend",
-    icon: "/logos/frontend.svg",
-    level: 4,
-    domain: "category",
-    featured: true,
-    parent: "me",
-  },
-  {
-    id: "tools",
-    name: "Tools",
-    icon: "/logos/tools.svg",
-    level: 3,
-    domain: "category",
-    featured: true,
-    parent: "me",
-  },
+//   // Featured Categories
+//   {
+//     id: "frontend",
+//     name: "Frontend",
+//     icon: "/logos/frontend.svg",
+//     level: 4,
+//     domain: "category",
+//     featured: true,
+//     parent: "me",
+//   },
+//   {
+//     id: "tools",
+//     name: "Tools",
+//     icon: "/logos/tools.svg",
+//     level: 3,
+//     domain: "category",
+//     featured: true,
+//     parent: "me",
+//   },
 
-  // Featured Skills
-  {
-    id: "react",
-    name: "React",
-    icon: "/logos/react.svg",
-    level: 4,
-    domain: "Frontend",
-    featured: true,
-    parent: "frontend",
-  },
-  {
-    id: "typescript",
-    name: "TypeScript",
-    icon: "typescript",
-    level: 4,
-    domain: "Frontend",
-    featured: true,
-    parent: "frontend",
-  },
-  {
-    id: "tailwind",
-    name: "Tailwind",
-    icon: "/logos/tailwind.svg",
-    level: 3,
-    domain: "Frontend",
-    featured: true,
-    parent: "frontend"
-  },
-  {
-    id: "git",
-    name: "Git",
-    icon: "/logos/git.svg",
-    level: 3,
-    domain: "Tools",
-    featured: true,
-    parent: "tools"
-  },
-  {
-    id: "vite",
-    name: "Vite",
-    icon: "/logos/vite.svg",
-    level: 3,
-    domain: "Tools",
-  },
-]
+//   // Featured Skills
+//   {
+//     id: "react",
+//     name: "React",
+//     icon: "/logos/react.svg",
+//     level: 4,
+//     domain: "Frontend",
+//     featured: true,
+//     parent: "frontend",
+//   },
+//   {
+//     id: "typescript",
+//     name: "TypeScript",
+//     icon: "typescript",
+//     level: 4,
+//     domain: "Frontend",
+//     featured: true,
+//     parent: "frontend",
+//   },
+//   {
+//     id: "tailwind",
+//     name: "Tailwind",
+//     icon: "/logos/tailwind.svg",
+//     level: 3,
+//     domain: "Frontend",
+//     featured: true,
+//     parent: "frontend"
+//   },
+//   {
+//     id: "git",
+//     name: "Git",
+//     icon: "/logos/git.svg",
+//     level: 3,
+//     domain: "Tools",
+//     featured: true,
+//     parent: "tools"
+//   },
+//   {
+//     id: "vite",
+//     name: "Vite",
+//     icon: "/logos/vite.svg",
+//     level: 3,
+//     domain: "Tools",
+//   },
+// ]
 
 /* =============================
    Utility: Radial Position
 ============================= */
 
-function getRadialPosition(index: number, total: number, radius: number) {
-  const angle = (index / total) * 2 * Math.PI
+// function getRadialPosition(index: number, total: number, radius: number) {
+//   const angle = (index / total) * 2 * Math.PI
 
-  return {
-    x: Math.cos(angle) * radius,
-    y: Math.sin(angle) * radius,
-  }
-}
+//   return {
+//     x: Math.cos(angle) * radius,
+//     y: Math.sin(angle) * radius,
+//   }
+// }
 
 /* =============================
    Heat Styles
@@ -125,31 +126,31 @@ const heatStyles = [
    Skill Node (Tree)
 ============================= */
 
-function SkillNode({ skill }: { skill: Skill }) {
-  return (
-    <div className="group relative flex items-center justify-center">
-      <div
-        className="
-        w-14 h-14 rounded-full bg-white shadow
-        flex items-center justify-center
-        transition-transform duration-300
-        group-hover:scale-125
-      "
-      >
-        <img src={skill.icon} alt={skill.name} className="w-7 h-7" />
-      </div>
+// function SkillNode({ skill }: { skill: Skill }) {
+//   return (
+//     <div className="group relative flex items-center justify-center">
+//       <div
+//         className="
+//         w-14 h-14 rounded-full bg-white shadow
+//         flex items-center justify-center
+//         transition-transform duration-300
+//         group-hover:scale-125
+//       "
+//       >
+//         <img src={skill.icon} alt={skill.name} className="w-7 h-7" />
+//       </div>
 
-      <span
-        className="
-        absolute top-full mt-2 text-xs whitespace-nowrap
-        opacity-0 group-hover:opacity-100 transition
-      "
-      >
-        {skill.name}
-      </span>
-    </div>
-  )
-}
+//       <span
+//         className="
+//         absolute top-full mt-2 text-xs whitespace-nowrap
+//         opacity-0 group-hover:opacity-100 transition
+//       "
+//       >
+//         {skill.name}
+//       </span>
+//     </div>
+//   )
+// }
 
 /* =============================
    Skill Chip (Heat Map)
@@ -174,111 +175,124 @@ export function SkillChip({ skill }: { skill: Skill }) {
 ============================= */
 
 export default function Expertise() {
-  /* ---------- Tree Logic ---------- */
-
-  const root = skills.find((s) => s.id === "me")!
-
-  const level1 = skills.filter(
-    (s) => s.featured && s.parent === root.id
-  )
-
-  const level2 = skills.filter(
-    (s) => s.featured && level1.some((p) => p.id === s.parent)
-  )
-
-  /* ---------- Domain Grouping ---------- */
-
-  const domainGroups = useMemo(() => {
-    const map: Record<string, Skill[]> = {}
-
-    skills.forEach((skill) => {
-      if (skill.domain === "root" || skill.domain === "category") return
-
-      if (!map[skill.domain]) map[skill.domain] = []
-
-      map[skill.domain].push(skill)
-    })
-
-    return map
-  }, [])
-
   return (
-    <section className="px-6 py-24 max-w-6xl mx-auto space-y-20">
-      {/* =============================
-          Featured Skill Tree
-      ============================= */}
-
-      <div className="space-y-8">
-        <h2 className="text-3xl font-semibold text-center">
-          Featured Expertise
-        </h2>
-
-        <div className="relative w-[420px] h-[420px] mx-auto flex items-center justify-center">
-          {/* Root */}
-          <SkillNode skill={root} />
-
-          {/* Level 1 */}
-          {level1.map((skill, i) => {
-            const pos = getRadialPosition(i, level1.length, 120)
-
-            return (
-              <div
-                key={skill.id}
-                className="absolute"
-                style={{
-                  transform: `translate(${pos.x}px, ${pos.y}px)`,
-                }}
-              >
-                <SkillNode skill={skill} />
-              </div>
-            )
-          })}
-
-          {/* Level 2 */}
-          {level2.map((skill, i) => {
-            const pos = getRadialPosition(i, level2.length, 200)
-
-            return (
-              <div
-                key={skill.id}
-                className="absolute"
-                style={{
-                  transform: `translate(${pos.x}px, ${pos.y}px)`,
-                }}
-              >
-                <SkillNode skill={skill} />
-              </div>
-            )
-          })}
-        </div>
+    <div>
+      <h1 className="font-bold text-3xl">
+        Expertise
+      </h1>
+      <div>
+        <RadialSkillTree />
       </div>
-
-      {/* =============================
-          Domain Heat Map
-      ============================= */}
-
-      <div className="space-y-10">
-        <h2 className="text-3xl font-semibold text-center">
-          Skill Domains
-        </h2>
-
-        <div className="space-y-8">
-          {Object.entries(domainGroups).map(([domain, skills]) => (
-            <div key={domain} className="space-y-3">
-              <h3 className="text-lg font-semibold">{domain}</h3>
-
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <SkillChip key={skill.id} skill={skill} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    </div>
   )
 }
+
+// export default function Expertise() {
+//   /* ---------- Tree Logic ---------- */
+
+//   const root = skills.find((s) => s.id === "me")!
+
+//   const level1 = skills.filter(
+//     (s) => s.featured && s.parent === root.id
+//   )
+
+//   const level2 = skills.filter(
+//     (s) => s.featured && level1.some((p) => p.id === s.parent)
+//   )
+
+//   /* ---------- Domain Grouping ---------- */
+
+//   const domainGroups = useMemo(() => {
+//     const map: Record<string, Skill[]> = {}
+
+//     skills.forEach((skill) => {
+//       if (skill.domain === "root" || skill.domain === "category") return
+
+//       if (!map[skill.domain]) map[skill.domain] = []
+
+//       map[skill.domain].push(skill)
+//     })
+
+//     return map
+//   }, [])
+
+//   return (
+//     <section className="px-6 py-24 max-w-6xl mx-auto space-y-20">
+//       {/* =============================
+//           Featured Skill Tree
+//       ============================= */}
+
+//       <div className="space-y-8">
+//         <h2 className="text-3xl font-semibold text-center">
+//           Featured Expertise
+//         </h2>
+
+//         <div className="relative w-[420px] h-[420px] mx-auto flex items-center justify-center">
+//           {/* Root */}
+//           <SkillNode skill={root} />
+
+//           {/* Level 1 */}
+//           {level1.map((skill, i) => {
+//             const pos = getRadialPosition(i, level1.length, 120)
+
+//             return (
+//               <div
+//                 key={skill.id}
+//                 className="absolute"
+//                 style={{
+//                   transform: `translate(${pos.x}px, ${pos.y}px)`,
+//                 }}
+//               >
+//                 <SkillNode skill={skill} />
+//               </div>
+//             )
+//           })}
+
+//           {/* Level 2 */}
+//           {level2.map((skill, i) => {
+//             const pos = getRadialPosition(i, level2.length, 200)
+
+//             return (
+//               <div
+//                 key={skill.id}
+//                 className="absolute"
+//                 style={{
+//                   transform: `translate(${pos.x}px, ${pos.y}px)`,
+//                 }}
+//               >
+//                 <SkillNode skill={skill} />
+//               </div>
+//             )
+//           })}
+//         </div>
+//       </div>
+
+//       {/* =============================
+//           Domain Heat Map
+//       ============================= */}
+
+//       <div className="space-y-10">
+//         <h2 className="text-3xl font-semibold text-center">
+//           Skill Domains
+//         </h2>
+
+//         <div className="space-y-8">
+//           {Object.entries(domainGroups).map(([domain, skills]) => (
+//             <div key={domain} className="space-y-3">
+//               <h3 className="text-lg font-semibold">{domain}</h3>
+
+//               <div className="flex flex-wrap gap-2">
+//                 {skills.map((skill) => (
+//                   <SkillChip key={skill.id} skill={skill} />
+//                 ))}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
 
 /* =============================
    Expertise Section
