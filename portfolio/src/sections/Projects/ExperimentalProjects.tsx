@@ -1,16 +1,12 @@
 import Card from "@/components/Card";
 import { MDXWrapper } from "@/components/mdxWrapper";
-import { loadProject } from "@/controllers/projects/loadProject";
 import type { ProjectItem } from "@/types/projects";
-import { useEffect, useState } from "react";
 
-export function ExperimentalProjects() {
+interface experimentalProjectsProps {
+    projects: ProjectItem[]
+}
 
-    const [experimentalProjects, setExperimentalProjects] = useState<ProjectItem[]>([])
-
-    useEffect(() => {
-        loadProject().then(setExperimentalProjects)
-    }, [])
+export function ExperimentalProjects(props: experimentalProjectsProps) {
     return (
         <section id="experimental-projects">
             <h3 className="text-2xl font-semibold">
@@ -19,11 +15,9 @@ export function ExperimentalProjects() {
             <p className="text-gray-500 mt-2">
                 Trying to learn new stuffs
             </p>
-            <div className="gap-4">
+            <div className="grid sm:grid-cols-2 gap-6 my-6">
 
-                {experimentalProjects.map((project) => {
-                    if (!project.metadata.experimental) return null;
-
+                {props.projects.map((project) => {
                     const Content = project.content
                     const CardChild = () => (
                         <>
@@ -38,7 +32,7 @@ export function ExperimentalProjects() {
                             </MDXWrapper>
                         </>
                     )
-                    return <Card key={project.metadata.title}>
+                    return <Card clickable modalContent={<CardChild />} key={project.metadata.title}>
                         <CardChild />
                     </Card>
                 })}

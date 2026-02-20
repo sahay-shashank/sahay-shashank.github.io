@@ -1,16 +1,14 @@
 import Card from "@/components/Card";
 import { MDXWrapper } from "@/components/mdxWrapper";
-import { loadProject } from "@/controllers/projects/loadProject";
 import type { ProjectItem } from "@/types/projects";
-import { useState, useEffect } from "react";
 
-export function OpenSourceProjects() {
-    const [featureProjects, setFeatureProjects] = useState<ProjectItem[]>([])
+interface openSourceProjectsProps {
+    projects: ProjectItem[]
+}
 
-    useEffect(() => {
-        loadProject().then(setFeatureProjects)
-    }, [])
+export function OpenSourceProjects(props: openSourceProjectsProps) {
 
+    if (props.projects.length == 0) return null
     return (
         <section id="oss-projects">
             <h3 className="text-2xl font-semibold">
@@ -19,12 +17,10 @@ export function OpenSourceProjects() {
             <p className="text-gray-500 mt-2">
                 Projects that love contributions
             </p>
-            <div className="grid gap-6 my-6">
+            <div className="grid gap-6 my-6 sm:grid-cols-2">
 
 
-                {featureProjects.map((project) => {
-                    if (project.metadata.featured) return null;
-
+                {props.projects.map((project) => {
                     const Content = project.content
                     const CardChild = () => (
                         <>
@@ -39,7 +35,7 @@ export function OpenSourceProjects() {
                             </MDXWrapper>
                         </>
                     )
-                    return <Card key={project.metadata.title}>
+                    return <Card clickable modalContent={<CardChild />} key={project.metadata.title}>
                         <CardChild />
                     </Card>
                 })}

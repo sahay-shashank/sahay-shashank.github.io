@@ -1,28 +1,51 @@
-import { motion, MotionValue, useTransform } from "framer-motion"
+import { AnimatePresence, motion, MotionValue, useTransform } from "framer-motion"
+import { useState } from "react"
+import Modal from "@/components/Modal"
 
 interface CardProps {
     children: React.ReactNode
     className?: string
+    clickable?: boolean
+    modalContent?: React.ReactNode
 }
 
 export function Card({
     children,
     className = "",
+    clickable = false,
+    modalContent,
 }: CardProps) {
 
+    const [open, setOpen] = useState(false)
+
+    const handleClick = () => {
+        if (clickable) setOpen(true)
+    }
+
     return (
-        <div
-            className={`
-        border rounded-xl p-4 transition-all
-        ${className}
-    `}
-        >
-            <div className="mt-3">
-                {children}
+        <>
+            <div
+                onClick={handleClick}
+                className={`
+                    border rounded-xl p-4 transition-all
+                    ${clickable ? "cursor-pointer hover:shadow-lg hover:-translate-y-1" : ""}
+                    ${className}
+                `}
+            >
+                <div className="mt-3">
+                    {children}
+                </div>
             </div>
-        </div>
+
+            <AnimatePresence>
+                <Modal open={open} onClose={() => setOpen(false)}>
+                    {modalContent}
+                </Modal>
+            </AnimatePresence>
+        </>
     )
 }
+
 
 interface CardParallaxProps {
     children: React.ReactElement
@@ -37,7 +60,7 @@ function CardParallax(props: CardParallaxProps) {
     const scale = useTransform(props.progress, props.range, [1, props.targetScale])
     return (
         <div className={`sticky h-dvh flex items-center justify-center top-0 ${props.className}`} >
-            <motion.div style={{ scale, top: `calc(-10% + ${props.index * 25}px)` }} className="relative">
+            <motion.div style={{ scale, top: `calc(-10% + ${props.index * 5}vh)` }} className="relative">
                 {props.children}
             </motion.div>
         </div >

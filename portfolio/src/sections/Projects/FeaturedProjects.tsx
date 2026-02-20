@@ -1,16 +1,14 @@
 import Card from "@/components/Card";
-import { useEffect, useRef, useState } from "react"
-import { loadProject } from "@/controllers/projects/loadProject";
+import { useRef } from "react"
 import type { ProjectItem } from "@/types/projects";
 import { MDXWrapper } from "@/components/mdxWrapper";
 import { useScroll } from "framer-motion";
 
-export function FeaturedProjects() {
-    const [featureProjects, setFeatureProjects] = useState<ProjectItem[]>([])
+interface featureProjectsProps {
+    projects: ProjectItem[]
+}
 
-    useEffect(() => {
-        loadProject().then(setFeatureProjects)
-    }, [])
+export function FeaturedProjects(props: featureProjectsProps) {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -26,9 +24,9 @@ export function FeaturedProjects() {
                 <p className="text-gray-500 mt-2">
                     Steaming-Hot Projects
                 </p>
-                {featureProjects.map((project, index) => {
+                {props.projects.map((project, index, arr) => {
                     if (!project.metadata.featured) return null;
-                    const targetScale = 1 - ((featureProjects.length - index) * 0.05);
+                    const targetScale = 1 - ((arr.length - index) * 0.05);
                     const Content = project.content
                     const CardChild = () => (
                         <>

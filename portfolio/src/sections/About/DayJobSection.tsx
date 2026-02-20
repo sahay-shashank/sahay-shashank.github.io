@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { loadTimeline } from "@/controllers/about/loadTimeline"
+import { loadTimeline } from "@/controllers/about/loadCareer"
 import type { TimelineItem } from "@/types/timeline"
 import TimelineEntry from "@/components/TimelineEntry"
 import { MDXWrapper } from "@/components/mdxWrapper"

@@ -3,7 +3,7 @@ import type { HobbyItem, HobbyMetadata } from "@/types/hobby"
 
 export async function loadHobby(): Promise<HobbyItem[]> {
     const modules = import.meta.glob<MDXModule<HobbyMetadata>>(
-        "@/content/about/*.hobby.mdx"
+        "@/content/hobby/*.mdx"
     )
 
     const items = await Promise.all(

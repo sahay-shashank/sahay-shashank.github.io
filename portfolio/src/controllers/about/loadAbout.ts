@@ -3,7 +3,7 @@ import type { AboutContent, AboutMetadata } from "@/types/about";
 
 export async function loadAbout(): Promise<AboutContent> {
     const modules = import.meta.glob<MDXModule<AboutMetadata>>(
-        "@/content/about/preview.mdx"
+        "@/content/sections/about.mdx"
     );
 
     if (Object.keys(modules).length !== 1) {
