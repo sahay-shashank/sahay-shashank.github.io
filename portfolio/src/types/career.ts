@@ -1,4 +1,4 @@
-export interface TimelineMetadata {
+export interface CareerTimelineMetadata {
     company: string;
     role: string;
     start: string;
@@ -6,7 +6,7 @@ export interface TimelineMetadata {
     version?: string;
 }
 
-export interface TimelineItem {
-    metadata: TimelineMetadata;
+export interface CareerTimelineItem {
+    metadata: CareerTimelineMetadata;
     content: React.ComponentType;
 }

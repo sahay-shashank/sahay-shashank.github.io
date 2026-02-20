@@ -1,9 +1,9 @@
 import type { MDXModule } from "@/components/mdxWrapper";
-import type { TimelineMetadata, TimelineItem } from "@/types/timeline";
+import type { CareerTimelineMetadata, CareerTimelineItem } from "@/types/career";
 
 
-export async function loadTimeline(): Promise<TimelineItem[]> {
-    const modules = import.meta.glob<MDXModule<TimelineMetadata>>(
+export async function loadTimeline(): Promise<CareerTimelineItem[]> {
+    const modules = import.meta.glob<MDXModule<CareerTimelineMetadata>>(
         "@/content/career/*.mdx"
     );
 

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { loadTimeline } from "@/controllers/about/loadCareer"
-import type { TimelineItem } from "@/types/timeline"
+import type { CareerTimelineItem } from "@/types/career"
 import TimelineEntry from "@/components/TimelineEntry"
 import { MDXWrapper } from "@/components/mdxWrapper"
 
 function DayJobSection() {
-    const [entries, setEntries] = useState<TimelineItem[]>([])
+    const [entries, setEntries] = useState<CareerTimelineItem[]>([])
 
     useEffect(() => {
         loadTimeline().then(setEntries)
