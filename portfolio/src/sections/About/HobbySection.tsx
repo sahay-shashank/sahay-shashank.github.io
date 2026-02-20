@@ -1,28 +1,43 @@
-import { loadHobby } from "@/controllers/about/loadHobby"
+import { loadHobby } from "@/controllers/hobby/loadHobby"
 import type { HobbyItem } from "@/types/hobby"
 import { useEffect, useState } from "react"
 import { MDXWrapper } from "@/components/mdxWrapper"
 import Card from "@/components/Card"
+import { loadHobbySection } from "@/controllers/hobby/loadSection"
+import type { SectionContent } from "@/types/section"
 
 
 function HobbySection() {
     const [items, setItems] = useState<HobbyItem[]>([])
+    const [hobbySectionContent, setHobbySectionContent] = useState<SectionContent | null>(null)
 
     useEffect(() => {
+        loadHobbySection().then(setHobbySectionContent)
         loadHobby().then(setItems)
     }, [])
 
+
+    useEffect(() => {
+    }, [])
+    if (!hobbySectionContent) return null;
+    const HobbyContent = hobbySectionContent.content
     return (
         <section id="night-job" className="py-6">
 
             <div className="mb-12">
                 <h2 className="text-2xl font-bold">
-                    Night Job
+                    {hobbySectionContent.metadata.title}
                 </h2>
 
                 <p className="text-gray-500 mt-2 max-w-xl">
-                    The interests and hobbies that keep me curious and creative.
+                    {hobbySectionContent.metadata.subtitle}
                 </p>
+            </div>
+
+            <div>
+                <MDXWrapper>
+                    <HobbyContent />
+                </MDXWrapper>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">

@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react"
-import { loadTimeline } from "@/controllers/about/loadCareer"
+import { loadTimeline } from "@/controllers/career/loadCareer"
 import type { CareerTimelineItem } from "@/types/career"
 import TimelineEntry from "@/components/TimelineEntry"
 import { MDXWrapper } from "@/components/mdxWrapper"
+import { loadCareerSection } from "@/controllers/career/loadSection"
+import type { SectionContent } from "@/types/section"
 
 function DayJobSection() {
     const [entries, setEntries] = useState<CareerTimelineItem[]>([])
+    const [careerSectionContent, setCareerSectionContent] = useState<SectionContent | null>(null)
 
     useEffect(() => {
         loadTimeline().then(setEntries)
+        loadCareerSection().then(setCareerSectionContent)
+
     }, [])
+
+    if (!careerSectionContent) return null;
+    const CareerContent = careerSectionContent.content
 
     return (
         <section id="day-job" className="py-6">
@@ -17,14 +25,19 @@ function DayJobSection() {
             {/* Title Block */}
             <div>
                 <h2 className="text-2xl font-bold">
-                    Day Job
+                    {careerSectionContent.metadata.title}
                 </h2>
 
                 <p className="text-gray-500 py-4">
-                    My professional journey building platforms and automation systems.
+                    {careerSectionContent.metadata.subtitle}
                 </p>
             </div>
 
+            <div>
+                <MDXWrapper>
+                    <CareerContent />
+                </MDXWrapper>
+            </div>
             {/* Timeline Block */}
             <div className=" border-l border-gray-300">
                 {entries.map((entry) => {

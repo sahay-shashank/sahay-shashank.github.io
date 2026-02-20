@@ -1,30 +1,30 @@
-import { loadAbout } from "@/controllers/about/loadAbout"
+import { loadAboutSection } from "@/controllers/about/loadSection"
 import { MDXWrapper } from "@/components/mdxWrapper"
-import type { AboutContent } from "@/types/about"
+import type { SectionContent } from "@/types/section"
 import { useEffect, useState } from "react"
 import DayJobSection from "@/sections/About/DayJobSection"
 import HobbySection from "@/sections/About/HobbySection"
 
 function About() {
-    const [about, setAbout] = useState<AboutContent | null>(null)
+    const [aboutSectionContent, setAboutSectionContent] = useState<SectionContent | null>(null)
 
     useEffect(() => {
-        loadAbout().then(setAbout)
+        loadAboutSection().then(setAboutSectionContent)
     }, [])
 
-    if (!about) return null;
-    const AboutContent = about.content
+    if (!aboutSectionContent) return null;
+    const AboutContent = aboutSectionContent.content
 
     return (
         <section id="about" className="px-6 py-20 border-t border-gray-200">
             {/* Title Block */}
             <div className="mb-6 space-y-6 text-center">
                 <h1 className="text-3xl font-bold">
-                    {about.metadata.title}
+                    {aboutSectionContent.metadata.title}
                 </h1>
 
                 <p className="text-gray-500 mt-2">
-                    A quick introduction about who I am and what I build.
+                    {aboutSectionContent.metadata.subtitle}
                 </p>
             </div>
 

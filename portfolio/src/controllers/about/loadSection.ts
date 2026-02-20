@@ -1,8 +1,8 @@
 import type { MDXModule } from "@/components/mdxWrapper";
-import type { AboutContent, AboutMetadata } from "@/types/about";
+import type { SectionContent, SectionMetadata } from "@/types/section";
 
-export async function loadAbout(): Promise<AboutContent> {
-    const modules = import.meta.glob<MDXModule<AboutMetadata>>(
+export async function loadAboutSection(): Promise<SectionContent> {
+    const modules = import.meta.glob<MDXModule<SectionMetadata>>(
         "@/content/sections/about.mdx"
     );
 

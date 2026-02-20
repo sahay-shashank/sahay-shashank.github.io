@@ -3,11 +3,11 @@ import { Copy, Check } from "lucide-react"
 
 interface CodeBlockProps {
     className?: string
-    code: string
+    children: string
     language?: string
 }
 
-export function CodeBlock({ code, language = "tsx", className = "" }: CodeBlockProps) {
+export function CodeBlock({ children: code, language = "tsx", className = "" }: CodeBlockProps) {
     const [copied, setCopied] = useState(false)
 
     const handleCopy = async () => {
