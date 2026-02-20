@@ -1,6 +1,8 @@
 import React from "react"
+import type { MDXComponents } from 'mdx/types'
 
-export const defaultMdxComponents = {
+
+export const defaultMdxComponents: MDXComponents = {
   h1: (props: React.ComponentProps<"h1">) => (
     <h1 className="text-3xl font-bold mb-4" {...props} />
   ),

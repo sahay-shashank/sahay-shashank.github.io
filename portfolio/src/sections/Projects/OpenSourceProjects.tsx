@@ -1,3 +1,4 @@
+import { Badge } from "@/components/Badge";
 import Card from "@/components/Card";
 import { MDXWrapper } from "@/components/mdxWrapper";
 import type { ProjectItem } from "@/types/projects";
@@ -30,7 +31,7 @@ export function OpenSourceProjects(props: openSourceProjectsProps) {
                                 <span>{project.metadata.title}</span>
                             </div>
                             {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
-                            <MDXWrapper>
+                            <MDXWrapper components={{ Badge }}>
                                 <Content />
                             </MDXWrapper>
                         </>

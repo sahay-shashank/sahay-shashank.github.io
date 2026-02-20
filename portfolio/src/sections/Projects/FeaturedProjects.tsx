@@ -3,6 +3,7 @@ import { useRef } from "react"
 import type { ProjectItem } from "@/types/projects";
 import { MDXWrapper } from "@/components/mdxWrapper";
 import { useScroll } from "framer-motion";
+import { Badge } from "@/components/Badge";
 
 interface featureProjectsProps {
     projects: ProjectItem[]
@@ -36,7 +37,7 @@ export function FeaturedProjects(props: featureProjectsProps) {
                                 <span>{project.metadata.title}</span>
                             </div>
                             {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
-                            <MDXWrapper>
+                            <MDXWrapper components={{ Badge }}>
                                 <Content />
                             </MDXWrapper>
                         </>
