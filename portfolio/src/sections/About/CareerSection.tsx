@@ -20,7 +20,7 @@ function DayJobSection() {
     const CareerContent = careerSectionContent.content
 
     return (
-        <section id="day-job" className="py-6">
+        <section id="career" className="py-6">
 
             {/* Title Block */}
             <div>

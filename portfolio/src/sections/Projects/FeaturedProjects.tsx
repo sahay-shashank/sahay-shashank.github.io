@@ -26,7 +26,6 @@ export function FeaturedProjects(props: featureProjectsProps) {
                     Steaming-Hot Projects
                 </p>
                 {props.projects.map((project, index, arr) => {
-                    if (!project.metadata.featured) return null;
                     const targetScale = 1 - ((arr.length - index) * 0.05);
                     const Content = project.content
                     const CardChild = () => (
@@ -44,7 +43,7 @@ export function FeaturedProjects(props: featureProjectsProps) {
                     )
                     return (
                         <Card.Parallax key={`card_container_${index}`} index={index} targetScale={targetScale} progress={scrollYProgress} range={[index * .025, 1]}>
-                            <Card key={`card_${index}`} className="bg-(--bg) h-[65vh] w-[80vw]">
+                            <Card key={`card_${index}`} className="bg-(--bg) h-fit w-fit">
                                 <CardChild />
                             </Card>
                         </Card.Parallax>

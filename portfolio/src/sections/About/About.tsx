@@ -2,7 +2,7 @@ import { loadAboutSection } from "@/controllers/about/loadSection"
 import { MDXWrapper } from "@/components/mdxWrapper"
 import type { SectionContent } from "@/types/section"
 import { useEffect, useState } from "react"
-import DayJobSection from "@/sections/About/DayJobSection"
+import DayJobSection from "@/sections/About/CareerSection"
 import HobbySection from "@/sections/About/HobbySection"
 
 function About() {
@@ -18,7 +18,7 @@ function About() {
     return (
         <section id="about" className="px-6 py-20 border-t border-gray-200">
             {/* Title Block */}
-            <div className="mb-6 space-y-6 text-center">
+            <div className="mb-6 text-center">
                 <h1 className="text-3xl font-bold">
                     {aboutSectionContent.metadata.title}
                 </h1>

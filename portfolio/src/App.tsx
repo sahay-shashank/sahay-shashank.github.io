@@ -3,14 +3,15 @@ import Hero from "@/sections/Hero"
 import About from "@/sections/About/About"
 import Projects from "@/sections/Projects/Projects"
 import Contact from "@/sections/Contact"
-import Footer from "./sections/Footer"
-import Expertise from "./sections/Expertise"
+import Footer from "@/sections/Footer"
+import Expertise from "@/sections/Expertise"
+// import Watermark from "@/components/Watermark"
 
 function App() {
   return (
     <>
       <NavBar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Expertise />

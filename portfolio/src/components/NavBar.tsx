@@ -1,6 +1,7 @@
 import { useTheme } from "@/context/theme";
 import { NavBar, IconButton } from "@sahay-shashank/ui-library";
 import { ThemeIcon } from "@/components/ThemeIcon";
+import { GlitchText } from "./Glitch";
 
 export default function NavBarComponent() {
     const links = [
@@ -13,7 +14,9 @@ export default function NavBarComponent() {
 
     return (
         <NavBar>
-            <NavBar.Logo>&gt;_&lt;</NavBar.Logo>
+            <NavBar.Logo>
+                {theme === "light" ? ">_<" : <GlitchText text="0_0" />}
+            </NavBar.Logo>
             <NavBar.Links>
                 {links.map((link) => (
                     <NavBar.LinkItem key={link.href}>

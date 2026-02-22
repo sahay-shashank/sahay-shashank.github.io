@@ -25,11 +25,11 @@ function Projects() {
 
     return (
         <section id="projects" className="px-6 py-20 border-t border-gray-200">
-            <div>
-                <h1 className="text-3xl font-bold text-center">
+            <div className="mb-6 text-center">
+                <h1 className="text-3xl font-bold">
                     {projectSectionContent.metadata.title}
                 </h1>
-                <p className="text-gray-500 mt-2 text-center">
+                <p className="text-gray-500 mt-2">
                     {projectSectionContent.metadata.subtitle}
                 </p>
             </div>

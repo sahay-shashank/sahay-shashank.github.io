@@ -22,7 +22,7 @@ function HobbySection() {
     if (!hobbySectionContent) return null;
     const HobbyContent = hobbySectionContent.content
     return (
-        <section id="night-job" className="py-6">
+        <section id="hobby" className="py-6">
 
             <div className="mb-12">
                 <h2 className="text-2xl font-bold">

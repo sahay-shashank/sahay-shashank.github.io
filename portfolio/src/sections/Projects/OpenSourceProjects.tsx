@@ -8,8 +8,6 @@ interface openSourceProjectsProps {
 }
 
 export function OpenSourceProjects(props: openSourceProjectsProps) {
-
-    if (props.projects.length == 0) return null
     return (
         <section id="oss-projects">
             <h3 className="text-2xl font-semibold">

@@ -18,24 +18,24 @@ export default function Expertise() {
   }, [])
 
   if (!expertiseSectionContent) return null;
-  
+
   const ExpertiseSectionContent = expertiseSectionContent.content
   return (
     <section id="Expertise" className="mx-auto py-24 px-6">
       {/* Title Block */}
-      <div className="mb-6 space-y-6 text-center">
+      <div className="mb-6 text-center">
         <h1 className="text-3xl font-bold">
           {expertiseSectionContent.metadata.title}
         </h1>
 
-        <p className="text-gray-500 mt-2 max-w-xl">
+        <p className="text-gray-500 mt-2">
           {expertiseSectionContent.metadata.subtitle}
         </p>
       </div>
 
 
       <div>
-        <MDXWrapper components={{ "code": CodeBlock }}>
+        <MDXWrapper>
           <ExpertiseSectionContent />
         </MDXWrapper>
       </div>
@@ -67,7 +67,7 @@ export default function Expertise() {
               {/* Animated Description */}
               <AnimatePresence initial={false}>
                 {isActive && (
-                  <motion.p
+                  <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
@@ -77,7 +77,7 @@ export default function Expertise() {
                     <MDXWrapper components={{ "code": CodeBlock }}>
                       <Content />
                     </MDXWrapper>
-                  </motion.p>
+                  </motion.div>
                 )}
               </AnimatePresence>
             </div>
