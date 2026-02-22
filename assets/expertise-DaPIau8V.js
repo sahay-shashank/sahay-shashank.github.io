@@ -1,0 +1,1 @@
+import{u as s,j as e}from"./index-CT61fXrN.js";const i={title:"Expertise",subtitle:"The way I build stuff",version:"0.0.1"};function o(t){const n={p:"p",...s(),...t.components};return e.jsx(n.p,{children:"// How I build"})}function r(t={}){const{wrapper:n}={...s(),...t.components};return n?e.jsx(n,{...t,children:e.jsx(o,{...t})}):o(t)}export{r as default,i as metadata};
