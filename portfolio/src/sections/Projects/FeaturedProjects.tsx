@@ -3,7 +3,7 @@ import { useRef } from "react"
 import type { ProjectItem } from "@/types/projects";
 import { MDXWrapper } from "@/components/mdxWrapper";
 import { useScroll } from "framer-motion";
-import { Badge } from "@/components/Badge";
+import { Badge } from "@sahay-shashank/ui-library";
 
 interface featureProjectsProps {
     projects: ProjectItem[]

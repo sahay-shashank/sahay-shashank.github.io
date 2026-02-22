@@ -1,7 +1,7 @@
-import { Badge } from "@/components/Badge";
 import Card from "@/components/Card";
 import { MDXWrapper } from "@/components/mdxWrapper";
 import type { ProjectItem } from "@/types/projects";
+import { Badge } from "@sahay-shashank/ui-library";
 
 interface openSourceProjectsProps {
     projects: ProjectItem[]
