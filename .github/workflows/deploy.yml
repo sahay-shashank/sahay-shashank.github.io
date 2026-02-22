@@ -19,13 +19,13 @@ jobs:
       with:
         noCache: true
         configFile: .github/workflows/devcontainer.json
-        imageName: pkm
+        imageName: portfolio
         runCmd: |
           set -e
     
           echo "[INFO] DevContainer Ready"
           
-          echo "[INFO] Running tasks to test, generate coverage report and build"
+          echo "[INFO] Running tasks to build all sites"
           if ! task build:all; then
             echo "[ERROR] Failed to properly run the tasks"
             exit 1

@@ -21,7 +21,7 @@ export default function Expertise() {
 
   const ExpertiseSectionContent = expertiseSectionContent.content
   return (
-    <section id="Expertise" className="mx-auto py-24 px-6">
+    <section id="expertise" className="mx-auto py-24 px-6">
       {/* Title Block */}
       <div className="mb-6 text-center">
         <h1 className="text-3xl font-bold">
