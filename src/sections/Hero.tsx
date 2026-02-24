@@ -14,7 +14,7 @@ function Hero() {
                 <div className="text-center md:text-left">
                     <p className="text-lg">Hey,</p>
 
-                    <h1 className="text-4xl md:text-6xl font-bold gap-6 text-center md:text-left">
+                    <h1 className="text-4xl md:text-6xl font-bold gap-6 text-center md:text-left leading-tight">
                         I'm
                         <div>{theme === "light" ? "Shashank" : <GlitchText text='Shashank' />}</div>
                     </h1>
