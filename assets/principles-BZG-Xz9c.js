@@ -1,4 +1,4 @@
-import{u as r,j as t}from"./index-DOcW2c0_.js";const o={title:"Principles"};function i(e){const n={code:"code",pre:"pre",...r(),...e.components};return t.jsx(n.pre,{children:t.jsx(n.code,{className:"language-json",children:`[
+import{u as r,j as t}from"./index-DJsHtZ-m.js";const o={title:"Principles"};function i(e){const n={code:"code",pre:"pre",...r(),...e.components};return t.jsx(n.pre,{children:t.jsx(n.code,{className:"language-json",children:`[
   {
     id: 1,
     title: "Architecture First",

@@ -1,0 +1,1 @@
+import{u as s,j as e}from"./index-DJsHtZ-m.js";const a={title:"Test"};function o(t){const n={p:"p",...s(),...t.components};return e.jsx(n.p,{children:"This is a test block"})}function r(t={}){const{wrapper:n}={...s(),...t.components};return n?e.jsx(n,{...t,children:e.jsx(o,{...t})}):o(t)}export{r as default,a as metadata};
