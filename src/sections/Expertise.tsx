@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { CodeBlock } from "@/components/codeBlock"
 import { loadExpertise } from "@/controllers/expertise/loadExpertise"
@@ -6,7 +6,7 @@ import type { ExpertiseItem } from "@/types/expertise"
 import { MDXWrapper } from "@/components/mdxWrapper"
 import type { SectionContent } from "@/types/section"
 import { loadExpertiseSection } from "@/controllers/expertise/loadSection"
-import { ArrowBigDown, ChevronDown } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 
 export default function Expertise() {
   const [active, setActive] = useState<number[]>([])
