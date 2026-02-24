@@ -10,6 +10,7 @@
 :root[data-theme="dark"] {
     --bg: #000000;
     --text: #ffffff;
+    --subtext: #707070;
 }
 
 :any-link {

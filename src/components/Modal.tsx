@@ -32,7 +32,7 @@ function Modal({ open, children, onClose }: ModalProps) {
                 onClick={onClose}
             >
                 <motion.div
-                    className="bg-zinc-900 border rounded-xl p-6 max-w-[80vw] w-full max-h-[90vh] overflow-y-auto"
+                    className="bg-zinc-900 border rounded-xl p-6 max-w-[80vw] w-full max-h-[80vh] overflow-y-auto"
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.9, opacity: 0 }}

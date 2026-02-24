@@ -37,14 +37,16 @@ export function FeaturedProjects(props: featureProjectsProps) {
                                 {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
 
                             </div>
-                            <MDXWrapper components={{ Badge }}>
-                                <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}><Content /></div>
-                            </MDXWrapper>
+                            <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}>
+                                <MDXWrapper components={{ Badge }}>
+                                    <Content />
+                                </MDXWrapper>
+                            </div>
                         </>
                     )
                     return (
                         <Card.Parallax key={`card_container_${index}`} index={index} targetScale={targetScale} progress={scrollYProgress} range={[index * .025, 1]}>
-                            <Card clickable modalContent={<CardChild expandable />} key={`card_${index}`} className="bg-(--bg) h-fit w-fit">
+                            <Card clickable modalContent={<CardChild expandable />} key={`card_${index}`} className="bg-(--bg) w-full">
                                 <CardChild expandable={false} />
                             </Card>
                         </Card.Parallax>

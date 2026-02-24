@@ -29,6 +29,12 @@ function Footer(props: FooterProps) {
 
     const socials: SocialLink[] = [
         {
+            icon: <Mail className="size-6" />,
+            href: `mailto:${props.email}`,
+            label: "Email",
+            hoverClass: "hover:bg-red-500 hover:text-white hover:border-red-500",
+        },
+        {
             icon: <img src={Github_Black} alt="GitHub" className="size-6" />,
             darkIcon: <img src={Github_White} alt="GitHub" className="size-6" />,
             href: `https://github.com/${props.username.github}`,
@@ -42,12 +48,7 @@ function Footer(props: FooterProps) {
             label: "LinkedIn",
             hoverClass: "hover:bg-blue-500 hover:text-white hover:border-blue-500",
         },
-        {
-            icon: <Mail className="size-6" />,
-            href: `mailto:${props.email}`,
-            label: "Email",
-            hoverClass: "hover:bg-red-500 hover:text-white hover:border-red-500",
-        },
+
     ]
 
     return (

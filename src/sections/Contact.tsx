@@ -28,7 +28,7 @@ function Contact({ email }: ContactProps) {
                 </p>
 
                 {/* Email Display */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div className="flex flex-row items-center justify-center gap-4">
                     <span className="text-lg font-medium">{email}</span>
 
                     <button

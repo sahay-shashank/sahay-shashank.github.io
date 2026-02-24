@@ -59,7 +59,7 @@ interface CardParallaxProps {
 function CardParallax(props: CardParallaxProps) {
     const scale = useTransform(props.progress, props.range, [1, props.targetScale])
     return (
-        <div className={`sticky h-[70vh] flex items-center justify-center top-0 ${props.className}`} >
+        <div className={`sticky min-h-[70vh] flex items-center justify-center top-[10vh] ${props.className}`} >
             <motion.div style={{ scale, top: `calc(${props.index * 3}vh)` }} className="relative">
                 {props.children}
             </motion.div>
