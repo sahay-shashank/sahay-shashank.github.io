@@ -20,7 +20,7 @@ export function ExperimentalProjects(props: experimentalProjectsProps) {
 
                 {props.projects.map((project) => {
                     const Content = project.content
-                    const CardChild = () => (
+                    const CardChild = ({ expandable }: { expandable: boolean }) => (
                         <>
                             <div
                                 className="w-full text-center justify-between items-center font-semibold"
@@ -30,12 +30,12 @@ export function ExperimentalProjects(props: experimentalProjectsProps) {
 
                             </div>
                             <MDXWrapper components={{ Badge }}>
-                                <div className="line-clamp-3 md:line-clamp-4"><Content /></div>
+                                <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}><Content /></div>
                             </MDXWrapper>
                         </>
                     )
-                    return <Card clickable modalContent={<CardChild />} key={project.metadata.title}>
-                        <CardChild />
+                    return <Card clickable modalContent={<CardChild expandable />} key={project.metadata.title}>
+                        <CardChild expandable={false} />
                     </Card>
                 })}
             </div>
