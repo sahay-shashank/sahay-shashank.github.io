@@ -20,14 +20,14 @@ export default function Expertise() {
 
   const ExpertiseSectionContent = expertiseSectionContent.content
   return (
-    <section id="expertise" className="mx-auto py-24 px-6">
+    <section id="expertise" className="px-6 py-20 border-t border-gray-200">
       {/* Title Block */}
       <div className="mb-6 text-center">
         <h1 className="text-3xl font-bold">
           {expertiseSectionContent.metadata.title}
         </h1>
 
-        <p className="text-(--subtext) mt-2">
+        <p className="text-(--subtext) mt-2 italic">
           {expertiseSectionContent.metadata.subtitle}
         </p>
       </div>

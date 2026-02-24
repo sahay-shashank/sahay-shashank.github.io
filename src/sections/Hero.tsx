@@ -34,7 +34,13 @@ function Hero() {
                                 </motion.span>
                                 <a href='#career'>
                                     <RotatingText
-                                        texts={['Build UI', 'Design Systems', 'Ship Products']}
+                                        texts={[
+                                            'Engineer Platforms',
+                                            'Automate Workflows',
+                                            'Scale Kubernetes',
+                                            'Design Observability',
+                                            'Stabilize Systems',
+                                        ]}
                                         mainClassName="px-3 bg-cyan-300 text-black overflow-hidden py-1 rounded-lg"
                                         staggerFrom="last"
                                         initial={{ y: "100%" }}
@@ -43,7 +49,7 @@ function Hero() {
                                         staggerDuration={0.025}
                                         splitLevelClassName="overflow-hidden"
                                         transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                                        rotationInterval={5000}
+                                        rotationInterval={3000}
                                     />
                                 </a>
                             </motion.p>
@@ -62,16 +68,24 @@ function Hero() {
                                 </motion.span>
                                 <a href='#hobby'>
                                     <RotatingText
-                                        texts={['Explore Ideas', 'Refactor Code', 'Study Systems']}
+                                        texts={[
+                                            'Master Boss Fights',
+                                            'Decode Plot Twists',
+                                            'Study Human Behavior',
+                                            'Chase Melodies',
+                                            'Capture Moments',
+                                            'Explore New Places',
+                                            'Build UI',
+                                        ]}
                                         mainClassName="px-3 bg-yellow-300 text-black overflow-hidden py-1 rounded-lg"
-                                        staggerFrom="random"
+                                        staggerFrom="first"
                                         initial={{ y: "100%" }}
                                         animate={{ y: 0 }}
                                         exit={{ y: "-120%" }}
                                         staggerDuration={0.025}
                                         splitLevelClassName="overflow-hidden"
                                         transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                                        rotationInterval={2000}
+                                        rotationInterval={3000}
                                     />
                                 </a>
                             </motion.p>

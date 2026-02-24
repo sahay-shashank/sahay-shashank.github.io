@@ -16,11 +16,11 @@ export const defaultMdxComponents: MDXComponents = {
   ),
 
   p: (props: React.ComponentProps<"p">) => (
-    <p className="text-(--subtext) mb-4 leading-relaxed" {...props} />
+    <p className="mb-4 leading-relaxed" {...props} />
   ),
 
   ul: (props: React.ComponentProps<"ul">) => (
-    <ul className="list-disc ml-6 mb-4" {...props} />
+    <ul className="list-disc ml-6 mb-4 text-sm" {...props} />
   ),
 
   li: (props: React.ComponentProps<"li">) => (

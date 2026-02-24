@@ -23,12 +23,12 @@ function DayJobSection() {
         <section id="career" className="py-6">
 
             {/* Title Block */}
-            <div>
+            <div className="mb-6">
                 <h2 className="text-2xl font-bold">
                     {careerSectionContent.metadata.title}
                 </h2>
 
-                <p className="text-(--subtext) py-4">
+                <p className="text-(--subtext) mt-2 italic">
                     {careerSectionContent.metadata.subtitle}
                 </p>
             </div>
@@ -54,7 +54,7 @@ function DayJobSection() {
                         subtitle={`${entry.metadata.role} • ${entry.metadata.start} - ${entry.metadata.end}`}
                         subtitleClassName="text-sm text-(--subtext) mb-4"
                         pointer={<span className="absolute -left-[7px] top-1.5 w-3 h-3 bg-blue-500 rounded-full" />}
-                        className="relative pl-6"
+                        className="relative pl-6 mb-4"
                         titleClassName="text-xl font-medium"
 
                     >

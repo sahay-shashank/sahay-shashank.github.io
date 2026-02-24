@@ -24,12 +24,12 @@ function HobbySection() {
     return (
         <section id="hobby" className="py-6">
 
-            <div className="mb-12">
+            <div className="mb-6">
                 <h2 className="text-2xl font-bold">
                     {hobbySectionContent.metadata.title}
                 </h2>
 
-                <p className="text-(--subtext) mt-2 max-w-xl">
+                <p className="text-(--subtext) mt-2 italic">
                     {hobbySectionContent.metadata.subtitle}
                 </p>
             </div>
@@ -43,17 +43,19 @@ function HobbySection() {
             <div className="grid sm:grid-cols-2 gap-6">
                 {items.map((item) => {
                     const Content = item.content
-                    return <Card
-                        className="p-6 border border-gray-700 rounded-xl"
-                        key={item.metadata.title}
-                    >
+                    const CardChild = ({ expand }: { expand: boolean }) => (<>
                         <h3 className="text-lg font-semibold mb-3">
                             {item.metadata.icon} {item.metadata.title}
                         </h3>
+                        <div className={!expand ? `line-clamp-3` : ""}>
 
-                        <MDXWrapper>
-                            <Content />
-                        </MDXWrapper>
+                            <MDXWrapper>
+                                <Content />
+                            </MDXWrapper>
+                        </div>
+                    </>)
+                    return <Card clickable modalContent={<CardChild expand />} key={item.metadata.title}>
+                        <CardChild expand={false} />
                     </Card>
                 })}
             </div>

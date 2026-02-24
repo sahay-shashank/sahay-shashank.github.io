@@ -23,7 +23,7 @@ function About() {
                     {aboutSectionContent.metadata.title}
                 </h1>
 
-                <p className="text-(--subtext) mt-2">
+                <p className="text-(--subtext) mt-2 italic">
                     {aboutSectionContent.metadata.subtitle}
                 </p>
             </div>
