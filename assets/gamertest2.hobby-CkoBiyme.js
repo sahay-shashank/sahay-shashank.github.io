@@ -1,2 +1,0 @@
-import{u as s,j as e}from"./index-CT61fXrN.js";const i={title:"GamerTest2",icon:"🎮"};function o(n){const t={p:"p",...s(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(t.p,{children:"Gaming helps me unwind while also sharpening strategic thinking and problem-solving."}),`
-`,e.jsx(t.p,{children:"I enjoy story-driven games, RPGs, and cooperative gameplay."})]})}function r(n={}){const{wrapper:t}={...s(),...n.components};return t?e.jsx(t,{...n,children:e.jsx(o,{...n})}):o(n)}export{r as default,i as metadata};
