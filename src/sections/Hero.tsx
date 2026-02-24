@@ -7,7 +7,7 @@ import { GlitchText } from "@/components/Glitch"
 function Hero() {
     const { theme } = useTheme()
     return (
-        <section className="h-screen flex items-center my-6">
+        <section className="min-h-screen flex items-center my-6">
             <div className="w-full max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
 
                 {/* LEFT CONTENT */}
