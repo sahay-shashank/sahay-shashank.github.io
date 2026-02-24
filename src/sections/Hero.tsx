@@ -2,19 +2,21 @@ import RotatingText from '@/components/RotatingText'
 import { LayoutGroup, motion } from 'framer-motion'
 import Image from "@/assets/Linkedin-White.png" //Dummy Image
 import { useTheme } from '@/context/theme'
-import { GlitchText } from '@/components/Glitch'
+import { GlitchText } from "@/components/Glitch"
+
 function Hero() {
     const { theme } = useTheme()
     return (
-        <section className="h-screen flex items-center">
+        <section className="h-screen flex items-center my-6">
             <div className="w-full max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
 
                 {/* LEFT CONTENT */}
                 <div className="text-center md:text-left">
                     <p className="text-lg">Hey,</p>
 
-                    <h1 className="text-4xl md:text-6xl font-bold flex gap-6">
-                        I'm{" "}{theme === "light" ? "Shashank" : <GlitchText text='Shashank' />}
+                    <h1 className="text-4xl md:text-6xl font-bold gap-6 text-center md:text-left">
+                        I'm
+                        <div>{theme === "light" ? "Shashank" : <GlitchText text='Shashank' />}</div>
                     </h1>
 
                     <div className="space-y-4 mt-6">

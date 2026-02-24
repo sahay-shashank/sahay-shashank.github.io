@@ -18,6 +18,7 @@
     "@mdx-js/react": "^3.1.1",
     "@mdx-js/rollup": "^3.1.1",
     "@sahay-shashank/ui-library": "^0.0.10",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/vite": "^4.1.18",
     "clsx": "^2.1.1",
     "fast-glob": "^3.3.3",

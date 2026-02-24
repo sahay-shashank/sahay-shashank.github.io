@@ -13,7 +13,7 @@ export function OpenSourceProjects(props: openSourceProjectsProps) {
             <h3 className="text-2xl font-semibold">
                 OpenSource Projects
             </h3>
-            <p className="text-gray-500 mt-2">
+            <p className="-500 mt-2">
                 Projects that love contributions
             </p>
             <div className="grid gap-6 my-6 sm:grid-cols-2">
@@ -24,13 +24,14 @@ export function OpenSourceProjects(props: openSourceProjectsProps) {
                     const CardChild = () => (
                         <>
                             <div
-                                className="w-full text-left flex justify-between items-center font-semibold"
+                                className="w-full text-center justify-between items-center font-semibold"
                             >
                                 <span>{project.metadata.title}</span>
+                                {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
+
                             </div>
-                            {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
                             <MDXWrapper components={{ Badge }}>
-                                <Content />
+                                <div className="line-clamp-3 md:line-clamp-4"><Content /></div>
                             </MDXWrapper>
                         </>
                     )

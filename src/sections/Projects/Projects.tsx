@@ -29,7 +29,7 @@ function Projects() {
                 <h1 className="text-3xl font-bold">
                     {projectSectionContent.metadata.title}
                 </h1>
-                <p className="text-gray-500 mt-2">
+                <p className="text-(--subtext) mt-2">
                     {projectSectionContent.metadata.subtitle}
                 </p>
             </div>

@@ -14,9 +14,11 @@ export default function NavBarComponent() {
 
     return (
         <NavBar>
-            <NavBar.Logo>
-                {theme === "light" ? ">_<" : <GlitchText text="0_0" />}
-            </NavBar.Logo>
+            <a href="/">
+                <NavBar.Logo>
+                    {theme === "light" ? ">_<" : <GlitchText text="0_0" />}
+                </NavBar.Logo>
+            </a>
             <NavBar.Links>
                 {links.map((link) => (
                     <NavBar.LinkItem key={link.href}>

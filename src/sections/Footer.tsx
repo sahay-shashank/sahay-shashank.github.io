@@ -70,11 +70,11 @@ function Footer(props: FooterProps) {
                 </div>
 
                 {/* Footer Text */}
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-(--subtext)">
                     Built with React, TypeScript, Vite & TailwindCSS
                 </p>
 
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-(--subtext)">
                     &copy; {new Date().getFullYear()} Shashank Sahay
                 </p>
             </div>

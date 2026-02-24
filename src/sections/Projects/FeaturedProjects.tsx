@@ -22,29 +22,30 @@ export function FeaturedProjects(props: featureProjectsProps) {
                 <h3 className="text-2xl font-semibold">
                     Featured Projects
                 </h3>
-                <p className="text-gray-500 mt-2">
+                <p className="text-(--subtext) mt-2">
                     Steaming-Hot Projects
                 </p>
                 {props.projects.map((project, index, arr) => {
-                    const targetScale = 1 - ((arr.length - index) * 0.05);
+                    const targetScale = 1 - ((arr.length - index - 1) * 0.05);
                     const Content = project.content
-                    const CardChild = () => (
+                    const CardChild = ({ expandable }: { expandable: boolean }) => (
                         <>
                             <div
-                                className="w-full text-left flex justify-between items-center font-semibold"
+                                className="w-full text-center justify-between items-center font-semibold"
                             >
                                 <span>{project.metadata.title}</span>
+                                {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
+
                             </div>
-                            {project.metadata.subtitle && (<p>{project.metadata.subtitle}</p>)}
                             <MDXWrapper components={{ Badge }}>
-                                <Content />
+                                <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}><Content /></div>
                             </MDXWrapper>
                         </>
                     )
                     return (
                         <Card.Parallax key={`card_container_${index}`} index={index} targetScale={targetScale} progress={scrollYProgress} range={[index * .025, 1]}>
-                            <Card key={`card_${index}`} className="bg-(--bg) h-fit w-fit">
-                                <CardChild />
+                            <Card clickable modalContent={<CardChild expandable />} key={`card_${index}`} className="bg-(--bg) h-fit w-fit">
+                                <CardChild expandable={false} />
                             </Card>
                         </Card.Parallax>
                     )

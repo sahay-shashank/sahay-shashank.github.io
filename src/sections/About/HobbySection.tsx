@@ -29,7 +29,7 @@ function HobbySection() {
                     {hobbySectionContent.metadata.title}
                 </h2>
 
-                <p className="text-gray-500 mt-2 max-w-xl">
+                <p className="text-(--subtext) mt-2 max-w-xl">
                     {hobbySectionContent.metadata.subtitle}
                 </p>
             </div>

@@ -28,7 +28,7 @@ function DayJobSection() {
                     {careerSectionContent.metadata.title}
                 </h2>
 
-                <p className="text-gray-500 py-4">
+                <p className="text-(--subtext) py-4">
                     {careerSectionContent.metadata.subtitle}
                 </p>
             </div>
@@ -52,7 +52,7 @@ function DayJobSection() {
                         key={entry.metadata.company}
                         title={entry.metadata.company}
                         subtitle={`${entry.metadata.role} • ${entry.metadata.start} - ${entry.metadata.end}`}
-                        subtitleClassName="text-sm text-gray-500 mb-4"
+                        subtitleClassName="text-sm text-(--subtext) mb-4"
                         pointer={<span className="absolute -left-[7px] top-1.5 w-3 h-3 bg-blue-500 rounded-full" />}
                         className="relative pl-6"
                         titleClassName="text-xl font-medium"

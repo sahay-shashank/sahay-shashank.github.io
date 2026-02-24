@@ -1,3 +1,4 @@
+import { Check, Copy } from "lucide-react"
 import { useState } from "react"
 
 interface ContactProps {
@@ -21,7 +22,7 @@ function Contact({ email }: ContactProps) {
                     Let's build something interesting together.
                 </h2>
 
-                <p className="text-gray-500">
+                <p className="text-(--subtext)">
                     Have an idea, opportunity, or just want to connect?
                     Feel free to reach out.
                 </p>
@@ -34,7 +35,7 @@ function Contact({ email }: ContactProps) {
                         onClick={handleCopy}
                         className="px-4 py-2 text-sm border rounded-lg hover:bg-gray-400 transition"
                     >
-                        {copied ? "Copied!" : "Copy Email"}
+                        {copied ? <Check size={16} /> : <Copy size={16} />}
                     </button>
                 </div>
 

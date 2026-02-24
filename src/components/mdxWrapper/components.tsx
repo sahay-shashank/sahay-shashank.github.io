@@ -16,7 +16,7 @@ export const defaultMdxComponents: MDXComponents = {
   ),
 
   p: (props: React.ComponentProps<"p">) => (
-    <p className="text-gray-700 mb-4 leading-relaxed" {...props} />
+    <p className="text-(--subtext) mb-4 leading-relaxed" {...props} />
   ),
 
   ul: (props: React.ComponentProps<"ul">) => (
