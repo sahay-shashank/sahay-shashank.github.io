@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion"
+import { SquareX } from "lucide-react"
 import { useEffect } from "react"
 import { createPortal } from "react-dom"
 
@@ -25,12 +26,19 @@ function Modal({ open, children, onClose }: ModalProps) {
     return createPortal(
         <AnimatePresence>
             {open && (<motion.div
-                className="text-white fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+                className="text-white fixed inset-0 bg-black/70 flex items-center justify-center z-50"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={onClose}
             >
+                <button
+                    onClick={onClose}
+                    className="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors"
+                    aria-label="Close modal"
+                >
+                    <SquareX />
+                </button>
                 <motion.div
                     className="bg-zinc-900 border rounded-xl p-6 max-w-[80vw] w-full max-h-[80vh] overflow-y-auto"
                     initial={{ scale: 0.9, opacity: 0 }}
@@ -39,6 +47,7 @@ function Modal({ open, children, onClose }: ModalProps) {
                     transition={{ duration: 0.2 }}
                     onClick={(e) => e.stopPropagation()}
                 >
+
                     {children}
                 </motion.div>
             </motion.div>)}
