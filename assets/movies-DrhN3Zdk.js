@@ -1,4 +1,4 @@
-import{u as i,j as n}from"./index-ZSk5X3tH.js";const l={title:"Cinema",icon:"🎬"};function r(t){const e={li:"li",p:"p",strong:"strong",ul:"ul",...i(),...t.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.p,{children:"Films broaden my perspective and deepen my appreciation for storytelling craft."}),`
+import{u as i,j as n}from"./index-BV47WTXF.js";const l={title:"Cinema",icon:"🎬"};function r(t){const e={li:"li",p:"p",strong:"strong",ul:"ul",...i(),...t.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.p,{children:"Films broaden my perspective and deepen my appreciation for storytelling craft."}),`
 `,n.jsx(e.p,{children:"I’m drawn to character-driven narratives, psychological dramas, and thought-provoking cinema with layered storytelling and subtle plot twists — stories that explore human complexity and moral tension."}),`
 `,n.jsx(e.p,{children:"Films I can watch on repeat:"}),`
 `,n.jsxs(e.ul,{children:[`
