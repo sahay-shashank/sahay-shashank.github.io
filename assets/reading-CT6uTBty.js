@@ -1,4 +1,4 @@
-import{u as t,j as n}from"./index-DJmEB7wr.js";const r={title:"Reader",icon:"📚"};function s(o){const e={li:"li",p:"p",strong:"strong",ul:"ul",...t(),...o.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.p,{children:"Reading helps me slow down and think more deliberately."}),`
+import{u as t,j as n}from"./index-ZSk5X3tH.js";const r={title:"Reader",icon:"📚"};function s(o){const e={li:"li",p:"p",strong:"strong",ul:"ul",...t(),...o.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.p,{children:"Reading helps me slow down and think more deliberately."}),`
 `,n.jsx(e.p,{children:"I’m currently exploring behavioral psychology, decision-making, and personal growth — books that challenge assumptions and refine how I approach habits, money, and long-term thinking."}),`
 `,n.jsx(e.p,{children:"Books I’d recommend:"}),`
 `,n.jsxs(e.ul,{children:[`
