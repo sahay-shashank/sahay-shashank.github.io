@@ -4,7 +4,7 @@ import About from "@/sections/About/About"
 import Projects from "@/sections/Projects/Projects"
 import Contact from "@/sections/Contact"
 import Footer from "@/sections/Footer"
-import Expertise from "@/sections/Expertise"
+import Philosophy from "@/sections/Philosophy"
 // import Watermark from "@/components/Watermark"
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <main className="relative z-10">
         <Hero />
         <About />
-        <Expertise />
+        <Philosophy />
         <Projects />
         <Contact email={"sahayshashank28@gmail.com"} />
       </main>

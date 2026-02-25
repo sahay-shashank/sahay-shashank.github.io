@@ -1,9 +1,9 @@
 import type { MDXModule } from "@/components/mdxWrapper"
-import type { ExpertiseItem, ExpertiseMetadata } from "@/types/expertise"
+import type { PhilosophyItem, PhilosophyMetadata } from "@/types/philosophy"
 
-export async function loadExpertise(): Promise<ExpertiseItem[]> {
-    const modules = import.meta.glob<MDXModule<ExpertiseMetadata>>(
-        "@/content/expertise/*.mdx"
+export async function loadPhilosophy(): Promise<PhilosophyItem[]> {
+    const modules = import.meta.glob<MDXModule<PhilosophyMetadata>>(
+        "@/content/philosophy/*.mdx"
     )
 
     const items = await Promise.all(

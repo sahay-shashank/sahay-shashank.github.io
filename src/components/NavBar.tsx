@@ -6,7 +6,7 @@ import { GlitchText } from "./Glitch";
 export default function NavBarComponent() {
     const links = [
         { label: "About", href: "#about" },
-        { label: "Expertise", href: "#expertise" },
+        { label: "Philosophy", href: "#philosophy" },
         { label: "Projects", href: "#projects" },
         { label: "Contact", href: "#contact" },
     ];

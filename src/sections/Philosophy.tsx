@@ -1,45 +1,44 @@
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { CodeBlock } from "@/components/codeBlock"
-import { loadExpertise } from "@/controllers/expertise/loadExpertise"
-import type { ExpertiseItem } from "@/types/expertise"
+import { loadPhilosophy } from "@/controllers/philosophy/loadPhilosophy"
+import type { PhilosophyItem } from "@/types/philosophy"
 import { MDXWrapper } from "@/components/mdxWrapper"
 import type { SectionContent } from "@/types/section"
-import { loadExpertiseSection } from "@/controllers/expertise/loadSection"
+import { loadPhilosophySection } from "@/controllers/philosophy/loadSection"
 import { ChevronDown } from "lucide-react"
 
-export default function Expertise() {
+export default function Philosophy() {
   const [active, setActive] = useState<number[]>([])
-  const [principles, setPrinciples] = useState<ExpertiseItem[]>([])
-  const [expertiseSectionContent, setExpertiseSectionContent] = useState<SectionContent | null>(null)
+  const [principles, setPrinciples] = useState<PhilosophyItem[]>([])
+  const [philosophySectionContent, setPhilosophySectionContent] = useState<SectionContent | null>(null)
   useEffect(() => {
-    loadExpertise().then(setPrinciples)
-    loadExpertiseSection().then(setExpertiseSectionContent)
+    loadPhilosophy().then(setPrinciples)
+    loadPhilosophySection().then(setPhilosophySectionContent)
   }, [])
-  if (!expertiseSectionContent) return null;
+  if (!philosophySectionContent) return null;
 
-  const ExpertiseSectionContent = expertiseSectionContent.content
+  const PhilosophySectionContent = philosophySectionContent.content
   return (
-    <section id="expertise" className="px-6 py-20 border-t border-gray-200">
+    <section id="philosophy" className="px-6 py-20 border-t border-gray-200">
       {/* Title Block */}
       <div className="mb-6 text-center">
         <h1 className="text-3xl font-bold">
-          {expertiseSectionContent.metadata.title}
+          {philosophySectionContent.metadata.title}
         </h1>
 
         <p className="text-(--subtext) mt-2 italic">
-          {expertiseSectionContent.metadata.subtitle}
+          {philosophySectionContent.metadata.subtitle}
         </p>
       </div>
 
-
       <div>
         <MDXWrapper>
-          <ExpertiseSectionContent />
+          <PhilosophySectionContent />
         </MDXWrapper>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-6 py-6">
         {principles.map((item, index) => {
           const isActive = active.includes(index)
           const Content = item.content
@@ -88,9 +87,9 @@ export default function Expertise() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.25 }}
-                    className="text-zinc-400 mt-3 pl-10 text-sm leading-relaxed overflow-hidden"
+                    className="mt-3 px-10 text-sm space-y-6 leading-relaxed overflow-hidden"
                   >
-                    <MDXWrapper components={{ code: CodeBlock }}>
+                    <MDXWrapper components={{ CodeBlock }}>
                       <Content />
                     </MDXWrapper>
                   </motion.div>
