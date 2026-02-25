@@ -1,1 +1,0 @@
-import{u as s,j as e}from"./index-DJsHtZ-m.js";const a={title:"Projects",subtitle:"Showcasing projects",version:"0.0.1"};function o(t){return e.jsx(e.Fragment,{})}function c(t={}){const{wrapper:n}={...s(),...t.components};return n?e.jsx(n,{...t,children:e.jsx(o,{...t})}):o()}export{c as default,a as metadata};
