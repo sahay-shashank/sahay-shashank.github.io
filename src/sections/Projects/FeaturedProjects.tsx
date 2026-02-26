@@ -7,6 +7,7 @@ import { Badge } from "@sahay-shashank/ui-library";
 
 import { useTheme } from "@/context/theme";
 import Links from "./Links";
+import { CodeBlock } from "@/components/codeBlock";
 
 interface featureProjectsProps {
     projects: ProjectItem[]
@@ -51,7 +52,7 @@ export function FeaturedProjects(props: featureProjectsProps) {
                                 ))}
                             </div>
                             <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}>
-                                <MDXWrapper components={{ Badge }}>
+                                <MDXWrapper components={{ Badge, CodeBlock }}>
                                     <Content />
                                 </MDXWrapper>
                             </div>

@@ -4,6 +4,7 @@ import { useTheme } from "@/context/theme";
 import type { ProjectItem } from "@/types/projects";
 import { Badge } from "@sahay-shashank/ui-library";
 import Links from "./Links";
+import { CodeBlock } from "@/components/codeBlock";
 
 interface experimentalProjectsProps {
     projects: ProjectItem[]
@@ -42,7 +43,7 @@ export function ExperimentalProjects(props: experimentalProjectsProps) {
                                 ))}
                             </div>
                             <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}>
-                                <MDXWrapper components={{ Badge }}>
+                                <MDXWrapper components={{ Badge, CodeBlock }}>
                                     <Content />
                                 </MDXWrapper>
                             </div>
