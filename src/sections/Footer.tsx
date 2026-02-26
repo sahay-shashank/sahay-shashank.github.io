@@ -72,7 +72,7 @@ function Footer(props: FooterProps) {
 
                 {/* Footer Text */}
                 <p className="text-sm text-(--subtext)">
-                    Built with React, TypeScript, Vite & TailwindCSS
+                    Built with React, TypeScript, Vite & TailwindCSS. Automated with Taskfile and GitHub Actions.
                 </p>
 
                 <p className="text-xs text-(--subtext)">
