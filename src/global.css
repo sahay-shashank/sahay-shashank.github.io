@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 :root {
+    --navbar-bg: transparent;
     --bg: #ffffff;
     --text: #000000;
     --subtext: #555555;
@@ -15,6 +16,10 @@
 
 :any-link {
     color: var(--text);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 html,
