@@ -1,4 +1,4 @@
-import{u as r,j as n}from"./index-BV47WTXF.js";const s={title:"Precise Standards"};function i(e){const t={p:"p",...r(),...e.components},{CodeBlock:o}=t;return o||a("CodeBlock"),n.jsxs(n.Fragment,{children:[n.jsx(o,{language:"aim-reliability",children:`function standards() {
+import{u as r,j as n}from"./index-_KD7vnfN.js";const s={title:"Precise Standards"};function i(e){const t={p:"p",...r(),...e.components},{CodeBlock:o}=t;return o||a("CodeBlock"),n.jsxs(n.Fragment,{children:[n.jsx(o,{language:"aim-reliability",children:`function standards() {
   buildSmall()
   refineContinuously()
   alignForReliability()
