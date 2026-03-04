@@ -1,13 +1,14 @@
 import RotatingText from '@/components/RotatingText'
 import { LayoutGroup, motion } from 'framer-motion'
-import Image from "@/assets/Linkedin-White.png" //Dummy Image
+// import Image from "@/assets/Linkedin-White.png" //Dummy Image
+import Image from "@/assets/shashank.jpeg"
 import { useTheme } from '@/context/theme'
 import { GlitchText } from "@/components/Glitch"
 
 function Hero() {
     const { theme } = useTheme()
     return (
-        <section className="min-h-screen flex items-center my-6">
+        <section className="min-h-screen flex items-center mb-6">
             <div className="w-full max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
 
                 {/* LEFT CONTENT */}
@@ -99,7 +100,7 @@ function Hero() {
                     <img
                         src={Image}
                         alt="Hero"
-                        className="w-72 md:w-96 object-contain"
+                        className="size-96 md:size-128 object-cover rounded-full object-left"
                     />
                 </div>
 

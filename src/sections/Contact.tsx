@@ -15,6 +15,11 @@ function Contact({ email }: ContactProps) {
         setTimeout(() => setCopied(false), 2000)
     }
 
+    function handleMail() {
+        const mailProps = "?subject=Hello&body=Hi, I saw your portfolio."
+        const mail = `mailto:${email}${mailProps}`
+        window.location.href = mail
+    }
     return (
         <section id="contact" className="px-6 py-20 border-t border-gray-200">
             <div className="max-w-3xl mx-auto text-center space-y-6">
@@ -40,12 +45,12 @@ function Contact({ email }: ContactProps) {
                 </div>
 
                 {/* Mailto CTA */}
-                <a
-                    href={`mailto:${email}?subject=Hello&body=Hi, I saw your portfolio.`}
+                <button
+                    onClick={handleMail}
                     className="inline-block mt-4 px-6 py-3 rounded-xl border bg-purple-500 text-white hover:opacity-90 transition"
                 >
                     Say Hello
-                </a>
+                </button>
             </div>
         </section>
     )

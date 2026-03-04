@@ -9,7 +9,7 @@ import { useTheme } from "@/context/theme"
 interface SocialLink {
     icon: React.ReactNode
     darkIcon?: React.ReactNode
-    href: string
+    onClick: () => void
     label: string
     hoverClass: string
 }
@@ -27,24 +27,28 @@ interface FooterProps {
 function Footer(props: FooterProps) {
     const { theme } = useTheme()
 
+    function handleClick(href: string) {
+        window.location.href = href
+    }
+
     const socials: SocialLink[] = [
         {
             icon: <Mail className="size-6" />,
-            href: `mailto:${props.email}`,
+            onClick: () => handleClick(`mailto:${props.email}`),
             label: "Email",
             hoverClass: "hover:bg-red-500 hover:text-white hover:border-red-500",
         },
         {
             icon: <img src={Github_Black} alt="GitHub" className="size-6" />,
             darkIcon: <img src={Github_White} alt="GitHub" className="size-6" />,
-            href: `https://github.com/${props.username.github}`,
+            onClick: () => handleClick(`https://github.com/${props.username.github}`),
             label: "GitHub",
             hoverClass: "hover:bg-green-500 hover:text-white hover:border-green-500",
         },
         {
             icon: <img src={Linkedin_Black} alt="Linkedin" className="size-6" />,
             darkIcon: <img src={Linkedin_White} alt="Linkedin" className="size-6" />,
-            href: `https://linkedin.com/in/${props.username.linkedin}`,
+            onClick: () => handleClick(`https://linkedin.com/in/${props.username.linkedin}`),
             label: "LinkedIn",
             hoverClass: "hover:bg-blue-500 hover:text-white hover:border-blue-500",
         },
@@ -57,16 +61,14 @@ function Footer(props: FooterProps) {
                 {/* Social Icons */}
                 <div className="flex justify-center gap-6">
                     {socials.map((social) => (
-                        <a
+                        <button
                             key={social.label}
-                            href={social.href}
-                            target="_blank"
-                            rel="noreferrer"
+                            onClick={social.onClick}
                             aria-label={social.label}
                             className={`p-3 rounded-xl border border-gray-300 transition duration-300 ${social.hoverClass}`}
                         >
                             {social.darkIcon && theme === "dark" ? social.darkIcon : social.icon}
-                        </a>
+                        </button>
                     ))}
                 </div>
 

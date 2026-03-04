@@ -44,12 +44,11 @@ export function FeaturedProjects(props: featureProjectsProps) {
                             >
                                 <span className="font-semibold text-4xl">{project.metadata.title}</span>
                                 {project.metadata.subtitle && (<p className="italic text-(--subtext) mt-2">{project.metadata.subtitle}</p>)}
-                                {project.metadata.badges && project.metadata.badges.map((badge, index, arr) => (
-                                    <>
-                                        <Badge key={index} label={badge.label} color={badge.color} />
-                                        {(index < arr.length) && (" ")}
-                                    </>
-                                ))}
+                                <div className="flex flex-wrap gap-2 justify-center">
+                                    {project.metadata.badges && project.metadata.badges.map((badge, index) => (
+                                        <Badge key={`badge_${index}`} label={badge.label} color={badge.color} />
+                                    ))}
+                                </div>
                             </div>
                             <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}>
                                 <MDXWrapper components={{ Badge, CodeBlock }}>
@@ -62,9 +61,9 @@ export function FeaturedProjects(props: featureProjectsProps) {
                         </div>
                     )
                     return (
-                        <Card.Parallax key={`card_container_${index}`} index={index} targetScale={targetScale} progress={scrollYProgress} range={[index * .025, 1]}>
-                            <Card clickable modalContent={<CardChild expandable />} key={`card_${index}`} className="bg-(--bg) w-[80vw] md:min-h-[40vh]">
-                                <CardChild expandable={false} />
+                        <Card.Parallax key={`card_container_${project.metadata.title}`} index={index} targetScale={targetScale} progress={scrollYProgress} range={[index * .025, 1]}>
+                            <Card clickable modalContent={<CardChild expandable />} key={`card_${project.metadata.title}`} className="bg-(--bg) w-[80vw] md:min-h-[40vh]">
+                                <CardChild key={`cardChild_${project.metadata.title}`} expandable={false} />
                             </Card>
                         </Card.Parallax>
                     )
@@ -72,6 +71,6 @@ export function FeaturedProjects(props: featureProjectsProps) {
             </div>
 
 
-        </section>
+        </section >
     )
 }

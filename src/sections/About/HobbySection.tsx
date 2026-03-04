@@ -54,8 +54,8 @@ function HobbySection() {
                             </MDXWrapper>
                         </div>
                     </>)
-                    return <Card clickable modalContent={<CardChild expand />} key={item.metadata.title}>
-                        <CardChild expand={false} />
+                    return <Card clickable modalContent={<CardChild expand />} key={`card_${item.metadata.title}`}>
+                        <CardChild key={`cardChild_${item.metadata.title}`} expand={false} />
                     </Card>
                 })}
             </div>

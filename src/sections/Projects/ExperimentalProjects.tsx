@@ -35,12 +35,12 @@ export function ExperimentalProjects(props: experimentalProjectsProps) {
                             >
                                 <span className="font-semibold text-2xl">{project.metadata.title}</span>
                                 {project.metadata.subtitle && (<p className="italic text-(--subtext) mt-2">{project.metadata.subtitle}</p>)}
-                                {project.metadata.badges && project.metadata.badges.map((badge, index, arr) => (
-                                    <>
-                                        <Badge key={index} label={badge.label} color={badge.color} />
-                                        {(index < arr.length) && (" ")}
-                                    </>
-                                ))}
+                                <div className="flex flex-wrap gap-2 justify-center">
+                                    {project.metadata.badges && project.metadata.badges.map((badge, index) => (
+                                        <Badge key={`badge_${index}`} label={badge.label} color={badge.color} />
+
+                                    ))}
+                                </div>
                             </div>
                             <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}>
                                 <MDXWrapper components={{ Badge, CodeBlock }}>
@@ -52,8 +52,8 @@ export function ExperimentalProjects(props: experimentalProjectsProps) {
                             </div>
                         </div>
                     )
-                    return <Card clickable modalContent={<CardChild expandable />} key={project.metadata.title}>
-                        <CardChild expandable={false} />
+                    return <Card clickable modalContent={<CardChild expandable />} key={`card_${project.metadata.title}`}>
+                        <CardChild key={`cardChild_${project.metadata.title}`} expandable={false} />
                     </Card>
                 })}
             </div>
