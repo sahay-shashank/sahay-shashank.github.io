@@ -1,4 +1,4 @@
-import{u as r,j as n}from"./index-DN5R8bpo.js";const a={title:"Video Games",icon:"🎮"};function t(i){const e={li:"li",p:"p",strong:"strong",ul:"ul",...r(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.p,{children:"Gaming helps me unwind while sharpening strategic thinking and adaptability."}),`
+import{u as r,j as n}from"./index-DDLn-S-z.js";const a={title:"Video Games",icon:"🎮"};function t(i){const e={li:"li",p:"p",strong:"strong",ul:"ul",...r(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.p,{children:"Gaming helps me unwind while sharpening strategic thinking and adaptability."}),`
 `,n.jsx(e.p,{children:"I’m drawn to story-driven experiences, immersive RPGs, and cooperative gameplay that reward planning, teamwork, and long-term decision-making."}),`
 `,n.jsx(e.p,{children:"Games I’d recommend without hesitation:"}),`
 `,n.jsxs(e.ul,{children:[`

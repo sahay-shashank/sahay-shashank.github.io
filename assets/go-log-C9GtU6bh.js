@@ -1,4 +1,4 @@
-import{u as i,j as e}from"./index-DN5R8bpo.js";const s={title:"Go-log",subtitle:"A logger written over native logger of Go",badges:[{label:"Go"},{label:"Containers"}],links:{github:"https://github.com/sahay-shashank/go-log"},experimental:!0};function o(t){const n={h2:"h2",hr:"hr",li:"li",p:"p",ul:"ul",...i(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"Go Log is a lightweight logging framework built over Go’s existing logging mechanisms."}),`
+import{u as i,j as e}from"./index-DDLn-S-z.js";const s={title:"Go-log",subtitle:"A logger written over native logger of Go",badges:[{label:"Go"},{label:"Containers"}],links:{github:"https://github.com/sahay-shashank/go-log"},experimental:!0};function o(t){const n={h2:"h2",hr:"hr",li:"li",p:"p",ul:"ul",...i(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.p,{children:"Go Log is a lightweight logging framework built over Go’s existing logging mechanisms."}),`
 `,e.jsx(n.p,{children:"The goal was not to replace Go’s logging, but to refine it."}),`
 `,e.jsx(n.hr,{}),`
 `,e.jsx(n.h2,{children:"Core Ideas"}),`
