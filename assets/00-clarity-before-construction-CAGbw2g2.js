@@ -1,4 +1,4 @@
-import{u as r,j as n}from"./index-CPncoote.js";const c={title:"Clarity before Construction"};function i(e){const t={p:"p",...r(),...e.components},{CodeBlock:o}=t;return o||s("CodeBlock"),n.jsxs(n.Fragment,{children:[n.jsx(o,{language:"understanding",children:`const goal = defineOutcome({
+import{u as r,j as n}from"./index-qk-fNxxr.js";const c={title:"Clarity before Construction"};function i(e){const t={p:"p",...r(),...e.components},{CodeBlock:o}=t;return o||s("CodeBlock"),n.jsxs(n.Fragment,{children:[n.jsx(o,{language:"understanding",children:`const goal = defineOutcome({
   problem: "what to achieve",
   purpose: "why it matters and who it helps"
 })`}),`
