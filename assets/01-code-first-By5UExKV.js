@@ -1,4 +1,4 @@
-import{u as s,j as e}from"./index-C6MrNxEY.js";const a={title:"Code First, Understanding Follows"};function i(o){const t={p:"p",...s(),...o.components},{CodeBlock:n}=t;return n||r("CodeBlock"),e.jsxs(e.Fragment,{children:[e.jsx(n,{language:"code-first",children:`let solution = build(minimalSolution)
+import{u as s,j as e}from"./index-CPncoote.js";const a={title:"Code First, Understanding Follows"};function i(o){const t={p:"p",...s(),...o.components},{CodeBlock:n}=t;return n||r("CodeBlock"),e.jsxs(e.Fragment,{children:[e.jsx(n,{language:"code-first",children:`let solution = build(minimalSolution)
 
 while (!satisfied(solution)) {
   solution = optimize(solution)
