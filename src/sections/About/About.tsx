@@ -19,7 +19,7 @@ function About() {
         <section id="about" className="px-6 py-20 border-t border-gray-200">
             {/* Title Block */}
             <div className="mb-6 text-center">
-                <h1 className="text-3xl font-bold">
+                <h1 className="text-4xl md:text-6xl font-bold heading-font">
                     {aboutSectionContent.metadata.title}
                 </h1>
 

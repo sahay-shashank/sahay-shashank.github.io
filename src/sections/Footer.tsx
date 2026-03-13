@@ -73,11 +73,11 @@ function Footer(props: FooterProps) {
                 </div>
 
                 {/* Footer Text */}
-                <p className="text-sm text-(--subtext)">
+                <p className="text-sm text-(--subtext) code-font">
                     Built with React, TypeScript, Vite & TailwindCSS. Automated with Taskfile and GitHub Actions.
                 </p>
 
-                <p className="text-xs text-(--subtext)">
+                <p className="text-xs text-(--subtext) code-font">
                     &copy; {new Date().getFullYear()} Shashank Sahay
                 </p>
             </div>

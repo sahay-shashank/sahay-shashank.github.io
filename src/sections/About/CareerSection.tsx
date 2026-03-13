@@ -20,11 +20,11 @@ function DayJobSection() {
     const CareerContent = careerSectionContent.content
 
     return (
-        <section id="career" className="py-6">
+        <section id="career" className="py-6 px-6">
 
             {/* Title Block */}
             <div className="mb-6">
-                <h2 className="text-2xl font-bold">
+                <h2 className="text-2xl md:text-4xl font-bold heading-font">
                     {careerSectionContent.metadata.title}
                 </h2>
 
@@ -55,7 +55,7 @@ function DayJobSection() {
                         subtitleClassName="text-sm text-(--subtext) mb-4"
                         pointer={<span className="absolute -left-[7px] top-1.5 w-3 h-3 bg-blue-500 rounded-full" />}
                         className="relative pl-6 mb-4"
-                        titleClassName="text-xl font-medium"
+                        titleClassName="text-xl md:text-2xl font-medium heading-font"
 
                     >
                         <TimelineEntryChild />

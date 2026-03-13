@@ -22,10 +22,10 @@ function HobbySection() {
     if (!hobbySectionContent) return null;
     const HobbyContent = hobbySectionContent.content
     return (
-        <section id="hobby" className="py-6">
+        <section id="hobby" className="py-6 px-6">
 
             <div className="mb-6">
-                <h2 className="text-2xl font-bold">
+                <h2 className="text-2xl md:text-4xl heading-font font-bold">
                     {hobbySectionContent.metadata.title}
                 </h2>
 
@@ -44,7 +44,7 @@ function HobbySection() {
                 {items.map((item) => {
                     const Content = item.content
                     const CardChild = ({ expand }: { expand: boolean }) => (<>
-                        <h3 className="text-lg font-semibold mb-3">
+                        <h3 className=" heading-font text-lg font-semibold mb-3">
                             {item.metadata.icon} {item.metadata.title}
                         </h3>
                         <div className={!expand ? `line-clamp-3` : ""}>

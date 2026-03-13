@@ -34,7 +34,7 @@ export function CodeBlock({ children: code, language = "tsx", className = "" }: 
             </div>
 
             {/* Code */}
-            <pre className="p-4 text-sm overflow-x-auto">
+            <pre className="p-4 text-sm overflow-x-auto code-font">
                 <code>{code}</code>
             </pre>
 

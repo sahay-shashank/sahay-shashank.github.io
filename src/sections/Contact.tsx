@@ -23,7 +23,7 @@ function Contact({ email }: ContactProps) {
     return (
         <section id="contact" className="px-6 py-20 border-t border-gray-200">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-                <h2 className="text-3xl font-bold">
+                <h2 className="text-4xl md:text-6xl font-bold heading-font">
                     Let's build something interesting together.
                 </h2>
 
@@ -34,7 +34,7 @@ function Contact({ email }: ContactProps) {
 
                 {/* Email Display */}
                 <div className="flex flex-row items-center justify-center gap-4">
-                    <span className="text-lg font-medium">{email}</span>
+                    <span className="text-lg font-medium code-font">{email}</span>
 
                     <button
                         onClick={handleCopy}
@@ -47,7 +47,7 @@ function Contact({ email }: ContactProps) {
                 {/* Mailto CTA */}
                 <button
                     onClick={handleMail}
-                    className="inline-block mt-4 px-6 py-3 rounded-xl border bg-purple-500 text-white hover:opacity-90 transition"
+                    className="code-font inline-block mt-4 px-6 py-3 rounded-xl border bg-purple-500 text-white hover:opacity-90 transition"
                 >
                     Say Hello
                 </button>

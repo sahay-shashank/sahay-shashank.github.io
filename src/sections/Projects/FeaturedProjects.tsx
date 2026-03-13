@@ -21,10 +21,10 @@ export function FeaturedProjects(props: featureProjectsProps) {
         offset: ['start start', 'end end']
     })
     return (
-        <section id="featured-projects">
+        <section id="featured-projects" className="px-6 py-6">
 
             <div className="mb-4">
-                <h3 className="text-2xl font-semibold">
+                <h3 className="text-2xl md:text-4xl font-semibold heading-font">
                     Featured Projects
                 </h3>
                 <p className="text-(--subtext) mt-2 italic">
@@ -42,16 +42,16 @@ export function FeaturedProjects(props: featureProjectsProps) {
                             <div
                                 className="w-full text-center justify-between items-center mb-6 space-y-4"
                             >
-                                <span className="font-semibold text-4xl">{project.metadata.title}</span>
+                                <span className="font-semibold text-2xl md:text-4xl heading-font">{project.metadata.title}</span>
                                 {project.metadata.subtitle && (<p className="italic text-(--subtext) mt-2">{project.metadata.subtitle}</p>)}
                                 <div className="flex flex-wrap gap-2 justify-center">
                                     {project.metadata.badges && project.metadata.badges.map((badge, index) => (
-                                        <Badge key={`badge_${index}`} label={badge.label} color={badge.color} />
+                                        <Badge className="code-font" key={`badge_${index}`} label={badge.label} color={badge.color} />
                                     ))}
                                 </div>
                             </div>
                             <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}>
-                                <MDXWrapper components={{ Badge, CodeBlock }}>
+                                <MDXWrapper components={{ CodeBlock }}>
                                     <Content />
                                 </MDXWrapper>
                             </div>

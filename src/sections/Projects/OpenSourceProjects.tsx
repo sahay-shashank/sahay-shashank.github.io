@@ -14,9 +14,9 @@ export function OpenSourceProjects(props: openSourceProjectsProps) {
     const { theme } = useTheme();
 
     return (
-        <section id="oss-projects">
+        <section id="oss-projects" className="px-6 py-6">
             <div className="mb-4">
-                <h3 className="text-2xl font-semibold">
+                <h3 className="text-2xl md:text-4xl font-semibold heading-font">
                     OpenSource Projects
                 </h3>
                 <p className="-500 mt-2 italic">
@@ -34,11 +34,11 @@ export function OpenSourceProjects(props: openSourceProjectsProps) {
                             <div
                                 className="w-full text-center justify-between items-center mb-6 space-y-4"
                             >
-                                <span className="font-semibold text-2xl">{project.metadata.title}</span>
+                                <span className="font-semibold text-2xl md:text-4xl heading-font">{project.metadata.title}</span>
                                 {project.metadata.subtitle && (<p className="italic text-(--subtext) mt-2">{project.metadata.subtitle}</p>)}
                                 <div className="flex flex-wrap gap-2 justify-center">
                                     {project.metadata.badges && project.metadata.badges.map((badge, index) => (
-                                        <Badge key={`badge_${index}`} label={badge.label} color={badge.color} />
+                                        <Badge className="code-font" key={`badge_${index}`} label={badge.label} color={badge.color} />
                                     ))}
                                 </div>
                             </div>

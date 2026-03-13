@@ -23,7 +23,7 @@ export default function Philosophy() {
     <section id="philosophy" className="px-6 py-20 border-t border-gray-200">
       {/* Title Block */}
       <div className="mb-6 text-center">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-4xl md:text-6xl font-bold heading-font">
           {philosophySectionContent.metadata.title}
         </h1>
 
@@ -38,7 +38,7 @@ export default function Philosophy() {
         </MDXWrapper>
       </div>
 
-      <div className="space-y-6 py-6">
+      <div className="space-y-6 py-6 px-6">
         {principles.map((item, index) => {
           const isActive = active.includes(index)
           const Content = item.content
@@ -47,23 +47,25 @@ export default function Philosophy() {
             <div
               key={index}
               className="border-b border-zinc-800 pb-4 cursor-pointer"
-              onClick={() =>
-                setActive((prev) =>
-                  prev.includes(index)
-                    ? prev.filter((i) => i !== index) // close only this one
-                    : [...prev, index]               // open without closing others
-                )
-              }
             >
               {/* Header */}
-              <div className="flex items-center justify-between">
+              <div
+                className="flex items-center justify-between"
+                onClick={() =>
+                  setActive((prev) =>
+                    prev.includes(index)
+                      ? prev.filter((i) => i !== index) // close only this one
+                      : [...prev, index]               // open without closing others
+                  )
+                }
+              >
                 {/* Left Side */}
                 <div className="flex items-center gap-4">
                   <span className="text-zinc-500 font-mono text-sm">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3 className="text-lg font-medium tracking-tight">
+                  <h3 className="text-lg font-medium tracking-tight code-font">
                     {item.metadata.title}
                   </h3>
                 </div>
