@@ -42,7 +42,7 @@ export function OpenSourceProjects(props: openSourceProjectsProps) {
                                     ))}
                                 </div>
                             </div>
-                            <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}>
+                            <div className={!expandable ? `line-clamp-3 md:line-clamp-7` : ""}>
                                 <MDXWrapper components={{ Badge, CodeBlock }}>
                                     <Content />
                                 </MDXWrapper>
@@ -52,7 +52,7 @@ export function OpenSourceProjects(props: openSourceProjectsProps) {
                             </div>
                         </div>
                     )
-                    return <Card clickable modalContent={<CardChild expandable />} key={`card_${project.metadata.title}`}>
+                    return <Card clickable modalContent={<CardChild expandable />} key={`card_${project.metadata.title}`} className="my-6">
                         <CardChild key={`cardChild_${project.metadata.title}`} expandable={false} />
                     </Card>
                 })}

@@ -20,7 +20,7 @@ function DayJobSection() {
     const CareerContent = careerSectionContent.content
 
     return (
-        <section id="career" className="py-6 px-6">
+        <section id="career" className="py-6 px-6 my-6">
 
             {/* Title Block */}
             <div className="mb-6">
@@ -39,7 +39,7 @@ function DayJobSection() {
                 </MDXWrapper>
             </div>
             {/* Timeline Block */}
-            <div className=" border-l border-gray-300">
+            <div className=" border-l border-gray-300 mt-12">
                 {entries.map((entry) => {
                     const Content = entry.content
                     const TimelineEntryChild = () => (

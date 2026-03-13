@@ -22,7 +22,7 @@ function HobbySection() {
     if (!hobbySectionContent) return null;
     const HobbyContent = hobbySectionContent.content
     return (
-        <section id="hobby" className="py-6 px-6">
+        <section id="hobby" className="py-6 px-6 my-6">
 
             <div className="mb-6">
                 <h2 className="text-2xl md:text-4xl heading-font font-bold">
@@ -34,13 +34,13 @@ function HobbySection() {
                 </p>
             </div>
 
-            <div>
+            <div className="mb-2">
                 <MDXWrapper>
                     <HobbyContent />
                 </MDXWrapper>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-6 mt-12 ">
                 {items.map((item) => {
                     const Content = item.content
                     const CardChild = ({ expand }: { expand: boolean }) => (<>

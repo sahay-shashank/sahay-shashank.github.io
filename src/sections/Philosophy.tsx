@@ -46,7 +46,7 @@ export default function Philosophy() {
           return (
             <div
               key={index}
-              className="border-b border-zinc-800 pb-4 cursor-pointer"
+              className="border-b pb-4 cursor-pointer"
             >
               {/* Header */}
               <div

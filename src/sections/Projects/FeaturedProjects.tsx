@@ -21,7 +21,7 @@ export function FeaturedProjects(props: featureProjectsProps) {
         offset: ['start start', 'end end']
     })
     return (
-        <section id="featured-projects" className="px-6 py-6">
+        <section id="featured-projects" className="px-6 py-6 mb-12">
 
             <div className="mb-4">
                 <h3 className="text-2xl md:text-4xl font-semibold heading-font">
@@ -50,7 +50,7 @@ export function FeaturedProjects(props: featureProjectsProps) {
                                     ))}
                                 </div>
                             </div>
-                            <div className={!expandable ? `line-clamp-3 md:line-clamp-10` : ""}>
+                            <div className={!expandable ? `line-clamp-3 md:line-clamp-7` : ""}>
                                 <MDXWrapper components={{ CodeBlock }}>
                                     <Content />
                                 </MDXWrapper>
@@ -62,7 +62,7 @@ export function FeaturedProjects(props: featureProjectsProps) {
                     )
                     return (
                         <Card.Parallax key={`card_container_${project.metadata.title}`} index={index} targetScale={targetScale} progress={scrollYProgress} range={[index * .025, 1]}>
-                            <Card clickable modalContent={<CardChild expandable />} key={`card_${project.metadata.title}`} className="bg-(--bg) w-[80vw] md:min-h-[40vh]">
+                            <Card clickable modalContent={<CardChild expandable />} key={`card_${project.metadata.title}`} className="my-6 bg-(--bg) w-[80vw] md:min-h-[40vh]">
                                 <CardChild key={`cardChild_${project.metadata.title}`} expandable={false} />
                             </Card>
                         </Card.Parallax>

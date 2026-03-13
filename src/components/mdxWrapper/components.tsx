@@ -4,15 +4,15 @@ import type { MDXComponents } from 'mdx/types'
 
 export const defaultMdxComponents: MDXComponents = {
   h1: (props: React.ComponentProps<"h1">) => (
-    <h1 className="text-4xl md:text-6xl font-bold m-4 heading-font" {...props} />
+    <h1 className="text-4xl md:text-6xl font-bold my-6 heading-font" {...props} />
   ),
 
   h2: (props: React.ComponentProps<"h2">) => (
-    <h2 className="text-2xl md:text-4xl font-semibold m-3 heading-font" {...props} />
+    <h2 className="text-2xl md:text-4xl font-semibold my-6 heading-font" {...props} />
   ),
 
   h3: (props: React.ComponentProps<"h3">) => (
-    <h3 className="text-xl font-medium m-3 heading-font" {...props} />
+    <h3 className="text-xl font-medium my-6 heading-font" {...props} />
   ),
 
   p: (props: React.ComponentProps<"p">) => (

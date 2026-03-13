@@ -13,14 +13,14 @@ function Hero() {
 
                 {/* LEFT CONTENT */}
                 <div className="text-center md:text-left">
-                    <p className="text-lg code-font">Hey!</p>
+                    <p className="text-md code-font">Hey!</p>
 
-                    <h1 className="text-6xl md:text-8xl font-bold gap-6 text-center md:text-left leading-tight heading-font">
+                    <h1 className="text-6xl font-bold gap-6 text-center md:text-left leading-tight heading-font">
                         I'm
                         <div>{theme === "light" ? "Shashank" : <GlitchText className="heading-font" text='Shashank' />}</div>
                     </h1>
 
-                    <div className="space-y-4 mt-6 code-font text-lg">
+                    <div className="space-y-4 mt-6 code-font text-md">
 
                         <LayoutGroup>
                             <motion.p
