@@ -38,7 +38,7 @@ jobs:
           echo "[INFO] DevContainer Ready"
           
           echo "[INFO] Running tasks to build all sites"
-          if ! task build:all; then
+          if ! task all; then
             echo "[ERROR] Failed to properly run the tasks"
             exit 1
           fi
