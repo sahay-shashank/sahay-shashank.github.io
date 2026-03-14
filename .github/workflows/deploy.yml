@@ -14,6 +14,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Clean dangling containers
+      run: |
+        set -e
+        if command -v docker >/dev/null 2>&1; then
+          echo "[INFO] Removing exited containers..."
+          docker container prune -f || true
+        else
+          echo "[ERROR] docker not available"
+          exit 1
+        fi
+
     - name: Perform tasks inside DevContainer
       uses: devcontainers/ci@v0.3
       with:
